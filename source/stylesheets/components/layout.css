@@ -1,0 +1,43 @@
+html {
+  @apply .h-full;
+}
+body {
+  @apply .bg-grey-lightest .h-full .flex .flex-col .relative;
+  color: rgba(51, 53, 16, .8);
+}
+h1,h2,h3,h4,h5 {
+  color: #333510;
+}
+
+.layout.container {
+  @apply .max-w-xl .mx-auto .flex .flex-grow .relative;
+}
+.layout aside {
+  @apply .w-1/5 .sticky .pin-t .self-start .mr-2;
+}
+.layout aside nav {
+  @apply .m-2 .mt-4 .ml-0;
+}
+.layout main {
+  @apply .w-4/5;
+}
+
+.layout aside nav ul {
+  @apply .list-reset;
+}
+.layout aside nav h3 {
+  @apply .text-base .text-grey-darkest .my-2;
+}
+.layout aside nav li ul {
+  @apply .mt-2;
+}
+.layout aside nav li {
+  @apply .text-base .ml-2 .mb-2;
+}
+.layout aside nav a {
+  @apply .no-underline .text-grey-darker;
+  transition: color 0.5s ease;
+}
+.layout aside nav a:hover {
+  @apply .text-lime-dark;
+}

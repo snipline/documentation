@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div class="header--search">
+          <input type="search" name="query" id="search" placeholder="Search...">
+        </div>
+        <nav>
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+        <option>Snipline</option>
+        <option>Snipbar</option>
+        <option>Snipline CLI</option>
+        <option>Snipline API</option>
+        <option>Snipline iOS</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li><a href="#">Introduction</a></li>
+          <li><a href="#">Installation</a>
+            <ul>
+              <li><a href="#">MacOS</a></li>
+              <li><a href="#">Windows</a></li>
+              <li><a href="#">Ubuntu</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Alternatives</a></li>
+          <li><h3>Basics</h3></li>
+          <li><a href="#">Core Features</a></li>
+          <li><a href="#">Common Snippets</a></li>
+          <li><a href="#">Navigating Snipline</a></li>
+          <li><a href="#">Vim usage</a></li>
+          <li><h3>Advanced</h3></li>
+          <li><a href="#">Advanced Snippets</a></li>
+          <li><h3>Support</h3></li>
+          <li><a href="#">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <%= yield %>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Docs</a></li>
+        <li><a href="#">Downloads</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+  </body>
+</html>

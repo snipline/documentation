@@ -1,0 +1,30 @@
+header {
+  @apply .bg-lime .p-2;
+}
+header .container {
+  @apply .flex .max-w-xl .mx-auto .items-center;
+}
+header h1 {
+  @apply .text-base .mb-0;
+}
+header h1 a {
+  @apply .no-underline .text-black;
+}
+header nav ul {
+  @apply .list-reset .flex .text-sm;
+}
+header nav li:first-child {
+  @apply .ml-0;
+}
+header nav li {
+  @apply .ml-4;
+}
+header nav a {
+  @apply .no-underline .text-black;
+}
+.header--search {
+  @apply .flex-grow .mx-auto .text-center;
+}
+.header--search input {
+  @apply .bg-lime-dark .rounded .p-2 .w-1/2;
+}
