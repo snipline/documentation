@@ -2,14 +2,16 @@
   @apply .pt-3 .px-4 .bg-white;
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6, #main.content p, #main.content ul, #main.content pre, #main.content blockquote {
-  @apply .mb-4 .text-base .leading-normal .mb-3;
+  @apply .mb-4 .text-base .leading-normal .mb-4;
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6 {
   @apply .text-grey-darkest;
 }
 
 #main.content p, #main.content pre, #main.content blockquote, #main.content ul, #main.content li {
-  @apply .text-grey-darker;
+  @apply .text-grey-darker .leading-loose;
+  font-size:1.15rem;
+  /* font-family: Georgia,serif; */
 }
 #main.content h1 {
   @apply .text-4xl .mb-0;
