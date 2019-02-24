@@ -19,8 +19,10 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :directory_indexes # pretty urls
 activate :syntax, :line_numbers => true
 set :markdown_engine, :kramdown
+# activate :lunr
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'

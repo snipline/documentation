@@ -1,5 +1,5 @@
 #main.content {
-  @apply .pt-3 .px-4 .bg-white;
+  @apply .pt-3 .px-5 .bg-white;
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6, #main.content p, #main.content ul, #main.content pre, #main.content blockquote {
   @apply .mb-4 .text-base .leading-normal .mb-4;
@@ -9,7 +9,7 @@
 }
 
 #main.content p, #main.content pre, #main.content blockquote, #main.content ul, #main.content li {
-  @apply .text-grey-darker .leading-loose;
+  @apply .text-grey-darkest .leading-loose .opacity-75;
   font-size:1.15rem;
   /* font-family: Georgia,serif; */
 }
@@ -17,17 +17,27 @@
   @apply .text-4xl .mb-0;
 }
 #main.content h2 {
-  @apply .text-3xl;
+  @apply .text-3xl .relative .pl-5 .-ml-5;
 }
 #main.content h3 {
-  @apply .text-4xl;
+  @apply .text-2xl .relative .pl-5 .-ml-5;
 }
 #main.content h4 {
-  @apply .text-3xl;
+  @apply .text-xl .relative .pl-5 .-ml-5;
 }
 #main.content h5 {
-  @apply .text-2xl;
+  @apply .text-xl .relative .pl-5 .-ml-5;
 }
 #main.content h6 {
-  @apply .text-xl;
+  @apply .text-xl .relative .pl-5 .-ml-5;
+}
+
+#main.content h2 a clr-icon {
+  @apply .hidden ;
+}
+#main.content h2:hover clr-icon, #main.content h3:hover clr-icon, #main.content h4:hover clr-icon, #main.content h5:hover clr-icon, #main.content h6:hover clr-icon {
+  @apply .block;
+}
+#main.content h2:hover a,#main.content h3:hover a,#main.content h4:hover a,#main.content h5:hover a,   #main.content h6:hover a {
+  @apply .flex .items-center .absolute .pin-l .pin-y;
 }

@@ -13,13 +13,13 @@ h1,h2,h3,h4,h5 {
   @apply .max-w-xl .mx-auto .flex .flex-grow .relative;
 }
 .layout aside {
-  @apply .w-1/5 .sticky .pin-t .self-start .mr-2;
+  @apply .w-1/4 .sticky .pin-t .self-start .mr-2;
 }
 .layout aside nav {
-  @apply .m-2 .mt-4 .ml-0;
+  @apply .m-4 .mt-4 .ml-0;
 }
 .layout main {
-  @apply .w-4/5;
+  @apply .w-3/4;
 }
 
 .layout aside nav ul {

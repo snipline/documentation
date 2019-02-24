@@ -1,5 +1,6 @@
 ---
 title: What is Snipline?
+lunr: true
 ---
 
 # What is Snipline?
