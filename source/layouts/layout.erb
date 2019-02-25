@@ -33,7 +33,7 @@
     <aside>
       <nav>
         <select>
-        <option>Snipline</option>
+        <option>Snipline Desktop</option>
         <option>Snipbar</option>
         <option>Snipline CLI</option>
         <option>Snipline API</option>
@@ -41,28 +41,18 @@
         </select>
         <ul>
           <li><h3>Getting Started</h3></li>
-          <li><a href="#">Introduction</a></li>
-          <li><%= link_to 'Installation', '/snipline/getting-started/installation' %></a>
-            <ul>
-              <li><%= link_to 'MacOS', '/snipline/getting-started/installation', anchor: "macos" %></li>
-              <li><%= link_to 'Windows', '/snipline/getting-started/installation', anchor: "windows" %></li>
-              <li><%= link_to 'Linux', '/snipline/getting-started/installation', anchor: "linux" %></li>
-            </ul>
-          </li>
-          <li><a href="#">Alternatives</a></li>
+          <%= tree_to_html(data.tree['desktop']['getting-started']) %>
           <li><h3>Basics</h3></li>
-          <li><a href="#">Core Features</a></li>
-          <li><a href="#">Common Snippets</a></li>
-          <li><a href="#">Navigating Snipline</a></li>
-          <li><a href="#">Vim usage</a></li>
+          <%= tree_to_html(data.tree['desktop']['basics']) %>
           <li><h3>Advanced</h3></li>
-          <li><a href="#">Advanced Snippets</a></li>
+          <%= tree_to_html(data.tree['desktop']['advanced']) %>
           <li><h3>Support</h3></li>
-          <li><a href="#">Billing</a></li>
+          <%= tree_to_html(data.tree['common']['support']) %>
         </ul>
       </nav>
     </aside>
     <main id="main" class="content">
+    <h1><%= current_page.data.title %></h1>
     <%= yield %>
     </main>
     </div><!-- container -->

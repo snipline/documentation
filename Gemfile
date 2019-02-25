@@ -10,3 +10,4 @@ gem "middleman-syntax"
 # gem 'therubyracer', :platforms => :ruby
 # gem 'execjs'
 gem 'mini_racer'
+gem 'middleman-navtree'

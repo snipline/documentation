@@ -14,11 +14,21 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
+redirect "", to: "/desktop/getting-started/01-introduction"
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+activate :navtree do |options|
+  options.data_file = 'tree.yml' # The data file where our navtree is stored.
+  options.automatic_tree_updates = false # The tree.yml file will be updated automatically when source files are changed.
+  options.ignore_files = ['sitemap.xml', 'robots.txt'] # An array of files we want to ignore when building our tree.
+  options.ignore_dir = ['layouts', 'images', 'javascripts', 'stylesheets'] # An array of directories we want to ignore when building our tree.
+  options.home_title = 'Home' # The default link title of the home page (located at "/"), if otherwise not detected.
+  options.promote_files = ['index.html.erb', 'desktop/getting-started'] # Any files we might want to promote to the front of our navigation
+  options.ext_whitelist = [] # If you add extensions (like '.md') to this array, it builds a whitelist of filetypes for inclusion in the navtree.
+end
 activate :directory_indexes # pretty urls
 activate :syntax, :line_numbers => true
 set :markdown_engine, :kramdown

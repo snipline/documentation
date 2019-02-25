@@ -14,7 +14,7 @@
   /* font-family: Georgia,serif; */
 }
 #main.content h1 {
-  @apply .text-4xl .mb-0;
+  @apply .text-4xl .mb-4 .pb-2 .border-b;
 }
 #main.content h2 {
   @apply .text-3xl .relative .pl-5 .-ml-5;
