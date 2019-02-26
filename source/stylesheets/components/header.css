@@ -10,8 +10,11 @@ header h1 {
 header h1 a {
   @apply .no-underline .text-black;
 }
+header nav {
+  @apply .flex-grow;
+}
 header nav ul {
-  @apply .list-reset .flex .text-sm;
+  @apply .list-reset .flex .text-sm .justify-end;
 }
 header nav li:first-child {
   @apply .ml-0;
@@ -23,8 +26,17 @@ header nav a {
   @apply .no-underline .text-black;
 }
 .header--search {
-  @apply .flex-grow .mx-auto .text-center;
+  @apply .flex-grow .mx-auto .text-center .hidden;
 }
 .header--search input {
   @apply .bg-lime-dark .rounded .p-2 .w-1/2;
+}
+
+@screen md {
+  .header--search {
+    @apply .block;
+  }
+  header nav {
+    @apply .flex-no-grow;
+  }
 }
