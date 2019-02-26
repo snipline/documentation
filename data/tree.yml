@@ -1,15 +1,6 @@
 ---
-common:
-  support:
-    01-billing.html.md: "/common/support/01-billing.html.md"
+index.html.md: "/index.html.md"
 desktop:
-  advanced:
-    01-advanced-snippets.html.md: "/desktop/advanced/01-advanced-snippets.html.md"
-    02-validation.html.md: "/desktop/advanced/02-validation.html.md"
-  basics:
-    01-core-features.html.md: "/desktop/basics/01-core-features.html.md"
-    02-common-snippets.html.md: "/desktop/basics/02-common-snippets.html.md"
-    03-vim-usage.html.md: "/desktop/basics/03-vim-usage.html.md"
   getting-started:
     01-introduction.html.md: "/desktop/getting-started/01-introduction.html.md"
     installation:
@@ -17,5 +8,13 @@ desktop:
       02-windows.html.md: "/desktop/getting-started/installation/02-windows.html.md"
       03-linux.html.md: "/desktop/getting-started/installation/03-linux.html.md"
     03-web-client.html.md: "/desktop/getting-started/03-web-client.html.md"
-index.html.md: "/index.html.md"
-search.json.erb: "/search.json.erb"
+  basics:
+    01-core-features.html.md: "/desktop/basics/01-core-features.html.md"
+    02-common-snippets.html.md: "/desktop/basics/02-common-snippets.html.md"
+    03-vim-usage.html.md: "/desktop/basics/03-vim-usage.html.md"
+  advanced:
+    01-advanced-snippets.html.md: "/desktop/advanced/01-advanced-snippets.html.md"
+    02-validation.html.md: "/desktop/advanced/02-validation.html.md"
+common:
+  support:
+    01-billing.html.md: "/common/support/01-billing.html.md"

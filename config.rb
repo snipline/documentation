@@ -14,7 +14,7 @@ end
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
-redirect "", to: "/desktop/getting-started/01-introduction"
+# redirect "", to: "/desktop/getting-started/01-introduction"
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false

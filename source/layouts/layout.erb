@@ -54,6 +54,8 @@
     <main id="main" class="content">
     <h1><%= current_page.data.title %></h1>
     <%= yield %>
+    <%= previous_link(data.tree) %> <%= next_link(data.tree) %>
+    <div><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/<%= current_page.path %>.md" target="_blank">Submit an issue/pull request!</a></div>
     </main>
     </div><!-- container -->
     <footer>
