@@ -35,7 +35,8 @@ set :markdown_engine, :kramdown
 # activate :lunr
 
 # With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+page '/desktop/**/*', layout: 'layouts/desktop'
+page '/sitemap', layout: 'layouts/desktop'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/

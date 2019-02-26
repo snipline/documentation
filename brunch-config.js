@@ -33,7 +33,7 @@ exports.config = {
       }
     },
     templates: {
-      joinTo: "javascripts/all.js"
+      joinTo: "javascripts/site.js"
     }
   },
 
@@ -105,7 +105,7 @@ exports.config = {
 
   modules: {
     autoRequire: {
-      "javascripts/all.js": ["source/javascripts/all"]
+      "javascripts/site.js": ["source/javascripts/site"]
     }
   },
 

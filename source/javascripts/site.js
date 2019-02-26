@@ -15,3 +15,6 @@
 //     console.log(map[res.ref].title);
 //   });
 // }
+
+// var aside = document.getElementsByTagName('aside');
+// m.render(aside, "Hello world")

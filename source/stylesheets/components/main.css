@@ -41,3 +41,15 @@
 #main.content h2:hover a,#main.content h3:hover a,#main.content h4:hover a,#main.content h5:hover a,   #main.content h6:hover a {
   @apply .flex .items-center .absolute .pin-l .pin-y;
 }
+.main--pagination {
+  @apply .relative .w-full .mb-4 .border-t .pt-5;
+}
+.main--pagination a, .main--edit a {
+  @apply .text-lime-darker .no-underline;
+}
+.main--pagination .next {
+  @apply .pin-r .absolute;
+}
+.main--edit {
+  @apply .text-xs .text-center;
+}

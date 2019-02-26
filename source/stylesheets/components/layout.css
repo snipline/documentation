@@ -13,17 +13,30 @@ h1,h2,h3,h4,h5 {
   @apply .max-w-xl .mx-auto .flex .flex-grow .relative;
 }
 .layout aside {
-  @apply .w-1/4 .sticky .pin-t .self-start .mr-2;
+  @apply .w-1/4 .sticky .pin-t .self-start .mr-2 .hidden;
+}
+@screen md {
+  .layout aside {
+    @apply .block;
+  }
 }
 .layout aside nav {
   @apply .m-4 .mt-4 .ml-0;
 }
 .layout main {
-  @apply .w-3/4;
+  @apply .w-full;
+}
+@screen md {
+  .layout main {
+    @apply .w-3/4;
+  }
 }
 
+.layout aside nav select {
+  @apply .ml-4;
+}
 .layout aside nav ul {
-  @apply .list-reset;
+  @apply .list-reset .ml-4;
 }
 .layout aside nav h3 {
   @apply .text-base .text-grey-darkest .my-2;

@@ -1,0 +1,14 @@
+---
+title: Navigation
+---
+<h2>Desktop</h2>
+<ul>
+    <li><h3>Getting Started</h3></li>
+    <%= tree_to_html(data.tree['desktop']['getting-started']) %>
+    <li><h3>Basics</h3></li>
+    <%= tree_to_html(data.tree['desktop']['basics']) %>
+    <li><h3>Advanced</h3></li>
+    <%= tree_to_html(data.tree['desktop']['advanced']) %>
+    <li><h3>Support</h3></li>
+    <%= tree_to_html(data.tree['common']['support']) %>
+</ul>

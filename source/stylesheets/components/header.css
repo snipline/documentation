@@ -1,8 +1,8 @@
 header {
-  @apply .bg-lime .p-2;
+  @apply .bg-lime .p-2 .relative .sticky .pin-t .pin-x .z-10;
 }
 header .container {
-  @apply .flex .max-w-xl .mx-auto .items-center;
+  @apply .flex .max-w-xl .mx-auto .items-center relative;
 }
 header h1 {
   @apply .text-base .mb-0;
@@ -10,8 +10,19 @@ header h1 {
 header h1 a {
   @apply .no-underline .text-black;
 }
-header nav {
-  @apply .flex-grow;
+header nav.mobile {
+  @apply .absolute .pin-r ;
+}
+header nav.desktop {
+  @apply .flex-grow .hidden;
+}
+@screen md {
+  header nav.desktop {
+    @apply .block;
+  }
+  header nav.mobile {
+    @apply .flex-grow .hidden;
+  }
 }
 header nav ul {
   @apply .list-reset .flex .text-sm .justify-end;
