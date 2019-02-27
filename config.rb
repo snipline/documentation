@@ -38,6 +38,19 @@ set :markdown_engine, :kramdown
 page '/desktop/**/*', layout: 'layouts/desktop'
 page '/sitemap', layout: 'layouts/desktop'
 
+helpers do
+  def search_content
+    sitemap.resources
+    .select { |resource| resource.path =~ /html$/ }
+    .map { |resource|
+      {
+        "path" => resource.path ,
+        "title" => resource.data.title,
+        "search_terms" => resource.data.search_terms,
+      }
+    }.to_json
+  end
+end
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
 

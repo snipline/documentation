@@ -1,6 +1,6 @@
 ---
 title: Snipline Docs
-lunr: true
+search_terms: "Home, Start, Snipline Documentation, Web App, Billing"
 ---
 
 Welcome to the Snipline Documentation.
