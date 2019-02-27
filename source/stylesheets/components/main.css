@@ -2,7 +2,7 @@
   @apply .pt-3 .px-5 .bg-white;
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6, #main.content p, #main.content ul, #main.content pre, #main.content blockquote {
-  @apply .mb-4 .text-base .leading-normal .mb-4;
+  @apply .text-base .leading-normal .mb-3;
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6 {
   @apply .text-grey-darkest;

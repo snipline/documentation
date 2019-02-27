@@ -42,6 +42,7 @@
 @import "components/layout";
 @import "components/header";
 @import "components/footer";
+@import "components/sitemap";
  
  /**
   * This injects all of Tailwind's utility classes, generated based on your

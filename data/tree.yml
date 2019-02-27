@@ -17,4 +17,4 @@ desktop:
     02-validation.html.md: "/desktop/advanced/02-validation.html.md"
 common:
   support:
-    01-billing.html.md: "/common/support/01-billing.html.md"
+    billing.html.md: "/common/support/billing.html.md"

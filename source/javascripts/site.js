@@ -18,3 +18,5 @@
 
 // var aside = document.getElementsByTagName('aside');
 // m.render(aside, "Hello world")
+var Turbolinks = require("turbolinks")
+Turbolinks.start()

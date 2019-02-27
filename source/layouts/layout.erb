@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "site" %>
 
   </head>
-  <body>
+  <body class="<%= page_classes %>">
     <header>
       <div class="container">
         <h1><a href="/">Snipline Docs</a></h1>
@@ -55,8 +55,6 @@
     <main id="main" class="content">
     <h1><%= current_page.data.title %></h1>
     <%= yield %>
-    <%= previous_link(data.tree) %> <%= next_link(data.tree) %>
-    <div><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/<%= current_page.path %>.md" target="_blank">Submit an issue/pull request!</a></em></div>
     </main>
     </div><!-- container -->
     <footer>

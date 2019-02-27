@@ -5,7 +5,7 @@ header .container {
   @apply .flex .max-w-xl .mx-auto .items-center relative;
 }
 header h1 {
-  @apply .text-base .mb-0;
+  @apply .text-base .mb-0 .ml-4;
 }
 header h1 a {
   @apply .no-underline .text-black;
@@ -14,7 +14,7 @@ header nav.mobile {
   @apply .absolute .pin-r ;
 }
 header nav.desktop {
-  @apply .flex-grow .hidden;
+  @apply .flex-no-grow .hidden .mr-4;
 }
 @screen md {
   header nav.desktop {
