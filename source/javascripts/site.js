@@ -41,6 +41,7 @@ var SearchResults = function() {
             m.request({ url: "/search.json", data: {} })
             .then(function(result) {
                 pageJson = result;
+                // Index results into Lunr
                 idx = lunr(function () {
                     this.ref('path')
                     this.field('title')
@@ -60,10 +61,13 @@ var SearchResults = function() {
         },
         view(vnode) {
             if(showResults()) {
-            return results().map(function(result) {
-                var page = getPage(result.ref)
-                return m("div", m("a", {href: page.path}, page.title));
-            });
+            return m("div.search--results", [
+                m("h3", "Search Results"),
+                results().map(function(result) {
+                    var page = getPage(result.ref)
+                    return m("div.search--result", m("a", {href: page.path}, [m("h4", page.title), m("p", page.description)] ));
+                })
+            ]);
             }
         }
     };
@@ -73,7 +77,10 @@ var SearchComponent = function() {
     return {
         view() {
             return [
-                m("input#search[name=search][type=search]", {value: query, oninput: function(e) { query = e.target.value; console.log(query) }}),
+                m("div.search--wrapper", [
+                    m("input#search[name=search][type=search]", {value: query, oninput: function(e) { query = e.target.value; console.log(query) }}),
+                    m("button", {class: (query.trim().length > 0 ) ? "search--clear" : 'hidden', onclick: function(e) { query = ""; document.getElementById("search").focus(); } }, m("clr-icon[shape=times]")),
+                ]),
                 m(SearchResults, {query: query})
             ];
         }
