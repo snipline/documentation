@@ -112,7 +112,7 @@ exports.config = {
   npm: {
     enabled: true,
 		whitelist: ["turbolinks", "cash-dom"],
-		globals: { // bootstrap-sass' JavaScript requires both '$' and 'jQuery' in global scope
+    globals: { // bootstrap-sass' JavaScript requires both '$' and 'jQuery' in global scope
       // $: 'jquery',
       // jQuery: 'jquery'
     }

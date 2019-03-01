@@ -8,15 +8,17 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Middleman" %></title>
     <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+    <%# <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.5.9/lunr.min.js" type="text/javascript"></script> %>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
 
   </head>
   <body class="<%= page_classes %>">
     <header>
       <div class="container">
         <h1><a href="/">Snipline Docs</a></h1>
-        <div class="header--search">
-          <input type="search" name="query" id="search" placeholder="Search...">
-        </div>
+        <div id="searchbar" class="header--search"></div>
         <nav class="desktop">
           <ul>
           <li><a href="https://snipline.io">Snipline</a></li>
@@ -70,10 +72,6 @@
       <p>&copy; 2019, Snipline. All Rights Reserved</p>
       </div>
     </footer>
-    <%= javascript_include_tag "site" %>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/lunr.js/0.5.9/lunr.min.js" type="text/javascript"></script>
-    <script src="/javascripts/custom-elements.min.js"></script>
-    <script src="/javascripts/clr-icons.min.js"></script>
 
   </body>
 </html>

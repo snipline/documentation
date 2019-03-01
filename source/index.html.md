@@ -1,6 +1,9 @@
 ---
 title: Snipline Docs
 search_terms: "Home, Start, Snipline Documentation, Web App, Billing"
+description: >
+  Welcome to the Snipline Documentation.
+  If you've just registered with Snipline, first of all, welcome!
 ---
 
 Welcome to the Snipline Documentation.

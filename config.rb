@@ -43,10 +43,12 @@ helpers do
     sitemap.resources
     .select { |resource| resource.path =~ /html$/ }
     .map { |resource|
+      resource
       {
         "path" => resource.path ,
         "title" => resource.data.title,
         "search_terms" => resource.data.search_terms,
+        "description" => resource.data.description,
       }
     }.to_json
   end

@@ -1,5 +1,8 @@
 ---
 title: Linux
+search_terms: "Linux, Debian, Ubuntu, .deb"
+description: >
+  Snipline Desktop supports Debian based Linux systems. This includes Ubuntu, Mint, Elementary OS and more.
 ---
 
 ### Debian / Ubuntu
