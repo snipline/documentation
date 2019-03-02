@@ -10,7 +10,7 @@ Welcome to the Snipline Documentation.
 
 If you've just registered with Snipline, first of all, welcome! 
 
-You'll want to start with the [Desktop Documentation](/desktop/getting-started/01-introduction/).
+You'll want to start with the [Desktop Documentation](/desktop/getting-started/introduction/).
 
 ### Web app
 

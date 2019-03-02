@@ -11,8 +11,11 @@
   @apply .no-underline .text-grey-darker;
   transition: color 0.5s ease;
 }
+#main.content .sitemap--ul li a {
+  @apply .block .rounded .p-1;
+}
 #main.content .sitemap--ul li a:hover {
-  @apply .text-lime-dark;
+  @apply .text-lime-dark .bg-grey-light;
 }
 .sitemap_index #main.content h2 {
     @apply .text-xl .mb-1;

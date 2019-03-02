@@ -1,5 +1,10 @@
 #main.content {
-  @apply .pt-3 .px-5 .bg-white;
+  @apply .pt-3 .px-5 .bg-white .pb-4;
+}
+@screen md {
+  #main.content {
+    @apply .pb-0;
+  }
 }
 #main.content h1, #main.content h2, #main.content h3, #main.content h4, #main.content h5, #main.content h6, #main.content p, #main.content ul, #main.content pre, #main.content blockquote {
   @apply .text-base .leading-normal .mb-3;
@@ -10,7 +15,7 @@
 
 #main.content p, #main.content pre, #main.content blockquote, #main.content ul, #main.content li {
   @apply .text-grey-darkest .leading-loose .opacity-75;
-  font-size:1.15rem;
+  font-size:1.10rem;
   /* font-family: Georgia,serif; */
 }
 #main.content h1 {
@@ -40,6 +45,9 @@
 }
 #main.content h2:hover a,#main.content h3:hover a,#main.content h4:hover a,#main.content h5:hover a,   #main.content h6:hover a {
   @apply .flex .items-center .absolute .pin-l .pin-y;
+}
+#main.content pre {
+  @apply overflow-x-scroll;
 }
 .main--pagination {
   @apply .relative .w-full .mb-4 .border-t .pt-5;

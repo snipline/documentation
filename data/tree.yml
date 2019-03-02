@@ -2,19 +2,22 @@
 index.html.md: "/index.html.md"
 desktop:
   getting-started:
-    01-introduction.html.md: "/desktop/getting-started/01-introduction.html.md"
+    introduction.html.md: "/desktop/getting-started/introduction.html.md"
+    core-features.html.md: "/desktop/getting-started/core-features.html.md"
     installation:
-      01-macos.html.md: "/desktop/getting-started/installation/01-macos.html.md"
-      02-windows.html.md: "/desktop/getting-started/installation/02-windows.html.md"
-      03-linux.html.md: "/desktop/getting-started/installation/03-linux.html.md"
-    03-web-client.html.md: "/desktop/getting-started/03-web-client.html.md"
+      macos.html.md: "/desktop/getting-started/installation/macos.html.md"
+      windows.html.md: "/desktop/getting-started/installation/windows.html.md"
+      linux.html.md: "/desktop/getting-started/installation/linux.html.md"
+    web-client.html.md: "/desktop/getting-started/web-client.html.md"
   basics:
-    01-core-features.html.md: "/desktop/basics/01-core-features.html.md"
-    02-common-snippets.html.md: "/desktop/basics/02-common-snippets.html.md"
-    03-vim-usage.html.md: "/desktop/basics/03-vim-usage.html.md"
+    user-interface.html.md: "/desktop/basics/user-interface.html.md"
+    first-snippet.html.md: "/desktop/basics/first-snippet.html.md"
+    dynamic-snippets.html.md: "/desktop/basics/dynamic-snippets.html.md"
+    examples.html.md: "/desktop/basics/examples.html.md"
   advanced:
-    01-advanced-snippets.html.md: "/desktop/advanced/01-advanced-snippets.html.md"
-    02-validation.html.md: "/desktop/advanced/02-validation.html.md"
+    variables.html.md: "/desktop/advanced/variables.html.md"
+    multi-choice.html.md: "/desktop/advanced/multi-choice.html.md"
+    navigation.html.md: "/desktop/advanced/navigation.html.md"
 common:
   support:
     billing.html.md: "/common/support/billing.html.md"

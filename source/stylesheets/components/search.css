@@ -1,5 +1,5 @@
 .search--results {
-    @apply w-full m-auto absolute pin-x bg-white .text-grey-darker border border-grey-light shadow-lg text-left;
+    @apply w-1/2 m-auto absolute pin-x bg-white .text-grey-darker border border-grey-light shadow-lg text-left;
     top:50px;
 }
 .search--results h3 {
