@@ -65,7 +65,7 @@ var SearchResults = function() {
                 m("h3", "Search Results"),
                 results().map(function(result) {
                     var page = getPage(result.ref)
-                    return m("div.search--result", m("a", {href: page.path}, [m("h4", page.title), m("p", page.description)] ));
+                    return m("div.search--result", m("a", {href: `${window.location.protocol}://${window.location.hostname}${page.path}`}, [m("h4", page.title), m("p", page.description)] ));
                 })
             ]);
             }
@@ -90,3 +90,8 @@ document.addEventListener('DOMContentLoaded', function(){
     var SearchRoot = document.getElementById("searchbar");
     m.mount(SearchRoot, SearchComponent);
 }, false);
+
+document.addEventListener("turbolinks:load", function() {
+    var SearchRoot = document.getElementById("searchbar");
+    m.mount(SearchRoot, SearchComponent);
+})
