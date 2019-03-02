@@ -30,7 +30,6 @@
     "babel-brunch": "^6.0.6",
     "lunr": "^2.3.6",
     "mithril": "^2.0.0-rc.4",
-    "tailwindcss": "^0.7.4",
-    "vue-brunch": "^2.0.3"
+    "tailwindcss": "^0.7.4"
   }
 }
