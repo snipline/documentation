@@ -37,10 +37,13 @@ header nav a {
   @apply .no-underline .text-black;
 }
 .header--search {
-  @apply .flex-grow .mx-auto .text-center .hidden;
+  @apply .flex-grow  .mx-auto .text-center .hidden .relative;
+}
+.header--search .search--wrapper {
+  @apply .w-1/2 m-auto relative;
 }
 .header--search input {
-  @apply .bg-lime-dark .rounded .p-2 .w-1/2;
+  @apply .bg-lime-dark .rounded .p-2 w-full;
 }
 
 @screen md {

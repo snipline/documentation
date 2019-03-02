@@ -45,7 +45,7 @@ helpers do
     .map { |resource|
       resource
       {
-        "path" => resource.path ,
+        "path" => resource.url,
         "title" => resource.data.title,
         "search_terms" => resource.data.search_terms,
         "description" => resource.data.description,
