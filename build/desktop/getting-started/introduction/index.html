@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Introduction</title>
+    <meta name="description" content="Snipline is a tool for developers to store and use shell commands. Most developers memorize most of their commonly used commands, but there are often long, complex, commands that are either written down or frequently googled.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_getting-started desktop_getting-started_introduction desktop_getting-started_introduction_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child active'><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Introduction</h1>
+    <p>Snipline is a tool for developers to store and use shell commands.</p>
+
+<p>Most developers memorize most of their commonly used commands, but there are often long, complex, commands that are either written down or frequently googled.</p>
+
+<p>Snipline is built for this exact situation. Keep all of your commands in one app which is easy to search, copy and much more.</p>
+
+<p>The app copies commands to your clipboard so it's easy to run commands while SSH'd into servers. Just paste the result into your terminal session.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/videos/what-is-snipline-01.mp4" type="video/mp4" />
+  <!-- <source src="myVideo.webm" type="video/webm"> -->
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="/videos/what-is-snipline-01.mp4">link to the video</a> instead.</p>
+</video>
+
+<p>The real power of Snipline comes from dynamic commands. Snipline includes variables which you can use to find and replace parts of a command on the fly.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/videos/what-is-snipline-02.mp4" type="video/mp4" />
+  <!-- <source src="myVideo.webm" type="video/webm"> -->
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="/videos/what-is-snipline-02.mp4">link to the video</a> instead.</p>
+</video>
+
+<p>You can optionally define a default value that you use the most to save time for each parameter, and each reference to the same variable is replaced and copied on the fly.</p>
+
+<p>Not only this, you can also specify multi-choice variables. For example, in a CURL request you might want to be able to choose between a GET,POST,PUT, or DELETE request.</p>
+
+<p>Try the command above in your own Snipline app with the following:</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># For bash shell users</span>
+mysqldump <span class="nt">-u</span> <span class="c">#{[User=user]} -p #{[Database=database]} &gt; #{[Database]}-`date '+%Y-%m-%d'`.sql</span>
+<span class="c"># For Fish shell users</span>
+mysqldump <span class="nt">-u</span> <span class="c">#{[User=user]} -p #{[Database=database]} &gt; #{[Database]}-(date "+%Y-%m-%d").sql</span>
+<span class="c"># For both</span>
+mysqldump <span class="nt">-u</span> <span class="c">#{[User=user]} -p #{[Database=database]} &gt; #{[Database]}-#select{[Date Format=(date "+%Y-%m-%d"),`date '+%Y-%m-%d'`]}.sql</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Read on for more on the core features of Snipline.</p>
+
+    <div class="main--pagination">
+      <a href="/" class="previous">Previous</a> <a href="/desktop/getting-started/core-features/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/getting-started/introduction.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

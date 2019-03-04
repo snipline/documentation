@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Examples</title>
+    <meta name="description" content="Every developer's workflow and tool choices are different and so these won't be useful for everyone. These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_basics desktop_basics_examples desktop_basics_examples_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child active'><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Examples</h1>
+    <p>Every developer's workflow and tool choices are different and so these won't be useful for everyone.</p>
+
+<p>These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀</p>
+
+<h2 id="general-commands">General commands</h2>
+
+<h3 id="copying-ssh-key-to-clipboard-macos">Copying SSH key to clipboard (MacOS)</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">cat</span> ~/.ssh/#<span class="o">{[</span><span class="nv">Key</span><span class="o">=</span>id_rsa.pub]<span class="o">}</span> | pbcopy
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="grep---search-a-directory-for-search-term">Grep - Search a directory for search term</h3>
+
+<p>Use Grep to display files that contain a search term - optionally only output the file name (useful with cached/minified files) and filter by file type</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">grep</span> <span class="nt">-rnw</span><span class="c">#{[Only Display Filenames?=l]} '#{[Directory=./]}' -e '#{[Searchterm]}' #{[Include=--include \*.js]}</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="curl-requests">Curl requests</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="s1">'#{[URL=https://]}'</span> <span class="nt">-X</span> <span class="s1">'#select{[Type=GET,POST,DELETE,PUT]}'</span> <span class="nt">-H</span> <span class="s1">'Authorization: Bearer #{[Auth=]}'</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="curl-request-with-json-responses">Curl request with JSON responses</h3>
+
+<p>Use <code>jq</code> to parse <code>JSON</code> responses and store the response in a file with the date appended.</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl <span class="s1">'#{[URL=https://]}'</span> <span class="nt">-X</span> <span class="s1">'#select{[Type=GET,POST,DELETE,PUT]}'</span> <span class="nt">-H</span> <span class="s1">'Authorization: Bearer #{[Auth=]}'</span> | jq <span class="o">&gt;</span> <span class="c">#{[File=file]}-`date '+%Y-%m-%d'`.json</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="symlink-directory-to-another-directory-in-the-same-directory">Symlink directory to another directory in the same directory</h3>
+
+<p>If you want to create a symlink of a directory that's in the same directory e.g. public_html -&gt; web then cd into the directory and run</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ln <span class="nt">-s</span> <span class="c">#{[Existing=web]} #{[Shortcut=public_html]}</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="find-files-that-start-with-a-string">Find files that start with a string</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="c">#{[String]}\*</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="remove-files-that-start-with-a-string">Remove files that start with a string</h3>
+
+<p>Make sure to do a dry run with the above command first!</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="c">#{[String]}\* -exec rm {} \;</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h2 id="php-commands">PHP commands</h2>
+
+<h3 id="local-server">Local server</h3>
+
+<p>Start a local php server with default port of 8000 and  /, web/, and public_html for default public directory choices.</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php <span class="nt">-S</span> localhost:#<span class="o">{[</span><span class="nv">Port</span><span class="o">=</span>8000]<span class="o">}</span> <span class="nt">-t</span> <span class="c">#select{[Public Directory=/,web/,public_html/]}</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h3 id="create-a-new-admin-in-magento-2">Create a new admin in Magento 2</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php bin/magento admin:user:create <span class="nt">--admin-user</span><span class="o">=</span><span class="s2">"#{[Username=myname]}"</span> <span class="nt">--admin-password</span><span class="o">=</span><span class="s2">"#{[Password]}"</span> <span class="nt">--admin-email</span><span class="o">=</span><span class="s2">"#{[Email=your@email]}"</span> <span class="nt">--admin-firstname</span><span class="o">=</span><span class="s2">"#{[Firstname=Name]}"</span> <span class="nt">--admin-lastname</span><span class="o">=</span><span class="s2">"#{[Lastname=Name]}"</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h2 id="mysql-commands">MySQL commands</h2>
+
+<h3 id="dump-a-database">Dump a database</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>mysqldump <span class="nt">-u</span> <span class="c">#{[User]} -p #{[Database]} &gt; #{[Database]}-`date '+%Y-%m-%d'`.sql</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+<h2 id="sql-commands">SQL commands</h2>
+
+<h3 id="create-a-new-database">Create a new database</h3>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CREATE DATABASE <span class="c">#{[DB]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';</span>
+</pre></td></tr></tbody></table></code></pre></div><p><br /></p>
+
+    <div class="main--pagination">
+      <a href="/desktop/basics/dynamic-snippets/" class="previous">Previous</a> <a href="/desktop/advanced/variables/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/basics/examples.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

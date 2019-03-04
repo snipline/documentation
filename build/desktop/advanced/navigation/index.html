@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Navigation</title>
+    <meta name="description" content="All the features of Snipline can be used with a mouse, and 90% of them can also be done with just the keyboard.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_advanced desktop_advanced_navigation desktop_advanced_navigation_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child active'><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Navigation</h1>
+    <p>All the features of Snipline can be used with a mouse, and 90% of them can also be done with just the keyboard.</p>
+
+<h2 id="creating-a-new-snippet">Creating a new snippet</h2>
+
+<div style="width:100%;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316532186?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+<p>While on the main section of Snipline (and not focused in the Search Bar or Command Bar) press <code>n</code> to bring up the new snippet form.</p>
+
+<p>From here you can use <code>Tab</code> and <code>Shift+Tab</code> to cycle through the text fields.</p>
+
+<p>You can either write dynamic variables by typing them manually (<code>#{[Variable Name=Default Value]}</code> and <code>#select{[Choice Name=value 1,value 2]}</code>) or use <code>Tab</code> to cycle to the variable name button and press <code>Enter</code> to append them to your command.</p>
+
+<p>When focused on the "advanced options" button, pressing <code>Enter</code> will bring up the advanced options which you can then use tab to cycle through as well.</p>
+
+<p>To save the snippet, use <code>Tab</code> to cycle to the <code>Save</code> button and press <code>Enter</code>.</p>
+
+<p>To go back without saving, first press <code>Esc</code> to unfocus any form elements and then press <code>Backspace</code>.</p>
+
+<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316534234?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+<h2 id="editing-an-existing-snippet">Editing an existing snippet</h2>
+
+<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316534973?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+<p>Editing an existing snippet works the same as creating a new snippet.</p>
+
+<p>To select a snippet to edit, press <code>e</code> while in the Snippet List, type the snippet row number and press <code>Enter</code>.</p>
+
+<p>You can delete a snippet by using <code>Tab</code> to focus the Delete button and pressing <code>Enter</code>.</p>
+
+<h2 id="filtering-and-selecting-snippets">Filtering and selecting snippets</h2>
+
+<p>Press <code>/</code> on your keyboard to select the search bar and type either part of the command name, or part of the command itself.</p>
+
+<p>When you press <code>Enter</code> you will come out of the search bar focus.</p>
+
+<p>If there is only one result the copy process will automatically start.</p>
+
+<p>If there is more than one result you can then type <code>:&lt;number&gt;</code> to choose a command to copy. Or <code>:e&lt;number&gt;</code> to choose a command to edit.</p>
+
+<p>Alternatively, if you have set an <code>alias</code> for a command you can copy this command with <code>:ya&lt;alias&gt;</code> edit it with <code>:ea&lt;alias&gt;</code>, or pin with <code>:pa&lt;alias&gt;</code>.</p>
+
+<div style="width:400px;text-align:center;margin:auto;text-align:center;"><iframe src="https://player.vimeo.com/video/316535550?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+<p>If you want to browse your snippets, you can use the <code>down</code>/<code>up</code> keys on your keyboard (or <code>j</code> / <code>k</code> for Vim users). For faster scrolling use <code>Ctrl+d</code> and <code>Ctrl+u</code>.</p>
+
+<p>Pressing <code>Tab</code> will cycle through focusable elements. Each snippet can be focused and pressing <code>Enter</code> will start the copy process.</p>
+
+<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316540926?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+<p>Finally, to jump back to the top of your list press <code>g+g</code> (<code>g</code> twice in quick succession). and to jump to the bottom use <code>shift+g</code>.</p>
+
+<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316541230?autoplay=true&amp;loop=true&amp;color=94AB0D&amp;byline=false&amp;transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe></div>
+
+
+    <div class="main--pagination">
+      <a href="/desktop/advanced/multi-choice/" class="previous">Previous</a> <a href="/common/support/billing/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/advanced/navigation.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

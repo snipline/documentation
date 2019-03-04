@@ -1,0 +1,56 @@
+header {
+  @apply .bg-lime .p-2 .relative .sticky .pin-t .pin-x .z-10;
+}
+header .container {
+  @apply .flex .max-w-xl .mx-auto .items-center relative;
+}
+header h1 {
+  @apply .text-base .mb-0 .ml-4;
+}
+header h1 a {
+  @apply .no-underline .text-black;
+}
+header nav.mobile {
+  @apply .absolute .pin-r ;
+}
+header nav.desktop {
+  @apply .flex-no-grow .hidden .mr-4;
+}
+@screen md {
+  header nav.desktop {
+    @apply .block;
+  }
+  header nav.mobile {
+    @apply .flex-grow .hidden;
+  }
+}
+header nav ul {
+  @apply .list-reset .flex .text-sm .justify-end;
+}
+header nav li:first-child {
+  @apply .ml-0;
+}
+header nav li {
+  @apply .ml-4;
+}
+header nav a {
+  @apply .no-underline .text-black;
+}
+.header--search {
+  @apply .flex-grow  .mx-auto .text-center .hidden .relative;
+}
+.header--search .search--wrapper {
+  @apply .w-1/2 m-auto relative;
+}
+.header--search input {
+  @apply .bg-lime-dark .rounded .p-2 w-full;
+}
+
+@screen md {
+  .header--search {
+    @apply .block;
+  }
+  header nav {
+    @apply .flex-no-grow;
+  }
+}

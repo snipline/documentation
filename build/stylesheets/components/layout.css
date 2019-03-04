@@ -1,0 +1,56 @@
+html {
+}
+body {
+  @apply .bg-grey-lightest .min-h-screen .flex .flex-col .relative;
+  color: rgba(51, 53, 16, .8);
+}
+h1,h2,h3,h4,h5 {
+  color: #333510;
+}
+
+.layout.container {
+  @apply .max-w-xl .mx-auto .flex .flex-grow .relative;
+}
+.layout aside {
+  @apply .w-1/4 .sticky .pin-t .self-start .mr-2 .hidden;
+}
+@screen md {
+  .layout aside {
+    @apply .block;
+  }
+}
+.layout aside nav {
+  @apply .m-4 .mt-4 .ml-0;
+}
+.layout main {
+  @apply .w-full;
+}
+@screen md {
+  .layout main {
+    @apply .w-3/4;
+  }
+}
+
+.layout aside nav select {
+  @apply .ml-4;
+}
+.layout aside nav ul {
+  @apply .list-reset .ml-4;
+}
+.layout aside nav h3 {
+  @apply .text-base .text-grey-darkest .my-2;
+}
+.layout aside nav li ul {
+  @apply .mt-2;
+}
+.layout aside nav li {
+  @apply .text-base .ml-2 .mb-2;
+}
+.layout aside nav a {
+  @apply .no-underline .text-grey-darker;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.layout aside nav a:hover {
+  @apply .text-lime-dark;
+}

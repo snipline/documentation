@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>User Interface</title>
+    <meta name="description" content="First, make sure you're signed in to your Snipline account, either on the web or download the Desktop application. Snipline's main UI can be split into three segments, Search Bar, Command List, and Command Bar.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_basics desktop_basics_user-interface desktop_basics_user-interface_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child active'><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>User Interface</h1>
+    <p>First, make sure you're signed in to your Snipline account, either on the web or download the Desktop application.</p>
+
+<p>Snipline's main UI can be split into three segments, Search Bar, Command List, and Command Bar.</p>
+
+<p><img src="/images/snipline/ui.png" alt="User Interface" /></p>
+
+<p>The Search Bar is used for searching through your snippets quickly. When you press <code>Enter</code> on your keyboard, you will be taken out of the search bar. If there is only one result from your search you will automatically begin the command-copying process.</p>
+
+<p>The Command List is a list of all of your snippets. You can scroll through these with your mouse, hover over the snippet actions. These buttons can be used for copying, editing and pinning.</p>
+
+<p>The Command Bar allows you to perform actions on your snippets. You can get to this with your mouse or by pressing <code>:</code> on your keyboard. You can copy commands with <code>:1</code>, edit with <code>:e1</code>, and pin with <code>:p1</code>. The number you choose is listed next to the snippet in the Command List.</p>
+
+<p>You can also target snippets by alias by using <code>:ya&lt;alias&gt;</code>, <code>:ea&lt;alias&gt;</code>, and <code>:pa&lt;alias&gt;</code>.</p>
+
+<p>Now you know the basics of the UI, time to move on to making your first snippet!</p>
+
+    <div class="main--pagination">
+      <a href="/desktop/getting-started/web-client/" class="previous">Previous</a> <a href="/desktop/basics/first-snippet/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/basics/user-interface.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

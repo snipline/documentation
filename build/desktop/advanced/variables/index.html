@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Variables</title>
+    <meta name="description" content="Most the things you need to know about are covered in the basics but here are some useful tips.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_advanced desktop_advanced_variables desktop_advanced_variables_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child active'><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Variables</h1>
+    <p>Most the things you need to know about are covered in the basics but here are some useful tips.</p>
+
+<h2 id="using-the-same-variable-twice">Using the same variable twice</h2>
+
+<p>If, for example, you need to reference a database name more than once in a Snippet it's very easy to do so. Just add in the variable name without the default parameter where needed.</p>
+
+<p>In the example below, <code>DB</code> is set with a default of <code>snipline</code> so the first time it pops up in the copy modal you'll see <code>snipline</code> pre-filled.</p>
+
+<p>After you fill in the value all references are changed to the same text.</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CREATE DATABASE <span class="c">#{[DB=snipline]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Using DB=snipline, User=mitch, Password=badpassword will result in the following:</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CREATE DATABASE snipline;create user mitch; grant all on snipline.* to 'mitch'@'localhost' identified by 'badpassword';
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Notice how that both instances of <code>DB</code> and <code>User</code> have been updated.</p>
+
+<h2 id="variable-validation">Variable Validation</h2>
+
+<p>There are somethings you <em>can't</em> do with variables. These include:</p>
+
+<ul>
+  <li>Using the same variable twice with more than one default value.</li>
+  <li>Specifying the default value after the first instance of the variable.</li>
+</ul>
+
+<p>With that in mind, the following are invalid:</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="c"># Invalid because default is set after first instance</span>
+<span class="nb">echo</span> <span class="s1">'#{[Variable]} #{[Variable=default]}'</span>
+
+<span class="c"># Invalid because two different defaults are set for the same variable</span>
+<span class="nb">echo</span> <span class="s1">'#{[Variable=first]} #{[Variable=second]}'</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Read the next chapter to find out how to use multi-choice preset variables.</p>
+
+    <div class="main--pagination">
+      <a href="/desktop/basics/examples/" class="previous">Previous</a> <a href="/desktop/advanced/multi-choice/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/advanced/variables.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

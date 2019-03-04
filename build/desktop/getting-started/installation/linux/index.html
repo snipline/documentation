@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Linux</title>
+    <meta name="description" content="Snipline Desktop supports Debian based Linux systems. This includes Ubuntu, Mint, Elementary OS and more.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_getting-started desktop_getting-started_installation desktop_getting-started_installation_linux desktop_getting-started_installation_linux_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child active'><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Linux</h1>
+    <h3 id="debian--ubuntu">Debian / Ubuntu</h3>
+
+<p>Snipline Desktop supports Debian based Linux systems. This includes Ubuntu, Mint, Elementary OS and more.</p>
+
+<p><a href="https://desktop.downloads.snipline.io/download/latest/linux_64">Download the latest .deb package</a></p>
+
+<h4 id="by-gui">By GUI</h4>
+
+<p>Install gdebi</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get install gdebi
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Right click the <code>.deb</code> file and click Open in GDebi Package Installer</p>
+
+<h4 id="by-command-line">By Command-line</h4>
+
+<p>Install the .deb with dpkg (Use sudo if needed) from <a href="https://desktop.downloads.snipline.io">the downloads page</a></p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>dpkg <span class="nt">-i</span> snipline_0.6.6_amd64.deb
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Install the package</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get install <span class="nt">-f</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>The app should now appear in your start menu or when searched.</p>
+
+<p>You can also run the application from the command-line</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> /usr/lib/snipline
+./Snipline
+</pre></td></tr></tbody></table></code></pre></div>
+<h4 id="limitations">Limitations</h4>
+
+<p>Currently only .deb files are available. Because of this updates have to be done manually.</p>
+
+<h4 id="known-issues">Known Issues</h4>
+
+<h5 id="adding-a-desktop-shortcut">Adding a Desktop shortcut</h5>
+
+<p>If it doesn't already exist, create <code>/usr/share/applications/snipline.desktop</code> with the following content</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>[Desktop Entry]
+Name=Snipline
+Comment=Snipline
+GenericName=snipline
+Exec=/usr/lib/snipline/Snipline --disable-gpu
+Icon=snipline
+Type=Application
+StartupNotify=true
+Categories=Utility;
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Make sure to <code>chmod +x /usr/share/applications/snipline.desktop</code></p>
+
+<h5 id="blank-screen">Blank screen</h5>
+
+<p>If you're greeted with a blank screen on Debian try running this command instead</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre> /usr/lib/snipline/Snipline <span class="nt">--disable-gpu</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>If you're using the GUI installation do the following:</p>
+
+<p>Go to <code>/usr/share/applications</code> and right click <code>Snipline</code> &gt; <code>Properties</code>.</p>
+
+<p>Change the Command property to</p>
+
+<p><code>/usr/lib/snipline/Snipline --disable-gpu</code></p>
+
+<p><img src="/images/snipline/ubuntu-properties.png" alt="Ubuntu Properties" /></p>
+
+<p>In the permissions tab make sure "Allow executing file as program" is checked.</p>
+
+<p>You should then be able to run Snipline</p>
+
+    <div class="main--pagination">
+      <a href="/desktop/getting-started/installation/windows/" class="previous">Previous</a> <a href="/desktop/getting-started/web-client/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/getting-started/installation/linux.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

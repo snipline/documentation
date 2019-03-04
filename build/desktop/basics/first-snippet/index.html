@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>First Snippet</title>
+    <meta name="description" content="Lets add our first snippet. If we press the green `+` icon next to the search bar we'll be greeted with the Snippet Form. Here we can fill-in the `name`, and `command`.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_basics desktop_basics_first-snippet desktop_basics_first-snippet_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child active'><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>First Snippet</h1>
+    <p>Lets add our first snippet. If we press the green <code>+</code> icon next to the search bar we'll be greeted with the Snippet Form. Here we can fill-in the <code>name</code>, and <code>command</code>.</p>
+
+<p>In the "Advanced Options" section, you can also provide an <code>alias</code> and <code>documentation</code>.</p>
+
+<p><img src="/images/snipline/Snippet-Form.png" alt="Adding a new Snippet" /></p>
+
+<p>The <code>name</code> can be used as a short reminder of what the command does and can be helpful for searching. The <code>command</code> is the command which will be copied to our clipboards. The <code>alias</code> is an optional field which can be used as a shortcut for referencing a snippets in the command bar. <code>documentation</code> is an optional field where you can expand further on what the command does.</p>
+
+<p>For our first snippet, use the name <strong>Summary of subdirectory sizes</strong>, the command <code>du -h --max-depth=1 ./</code>. Feel free to give the Snippet an <code>alias</code>, too. I've chosen <code>duh</code> as mine.</p>
+
+<p>Press <code>Save</code> at the bottom of the page.</p>
+
+<p><em>Tip: This command summarizes the size of all the child subdirectories in the current directory.</em></p>
+
+<p>Back in the main interface we can see our new snippet has been added. The number 1 appears to the left of it. Depending on what we search this snippet will change but the number 1 will always appear first.</p>
+
+<p><img src="/images/snipline/Screenshot-2019-01-10-at-15.45.17.png" alt="Snippet in the Command List" /></p>
+
+<p>Enter the search bar (Press <code>/</code> on your keyboard or use your mouse), and begin typing <code>du</code>. When you have more snippets you'll notice that the Command List updates as you type. For now we have this first Snippet still showing.</p>
+
+<p>As soon as we press <code>Enter</code> the command will be copied to our clipboard. This is because if there's only one result the copy process will begin straight away.</p>
+
+<p>If we had more than one command listed we would have to choose a command to copy. Or, alternatively cancel the search with the <code>Esc</code> key.</p>
+
+<p>Copying a command can be done in a few ways:</p>
+
+<ul>
+  <li>Pressing <code>Enter</code> in the search if there is only one result.</li>
+  <li>Typing <code>&lt;number&gt;</code> in the Command Bar</li>
+  <li>Typing <code>ya&lt;alias&gt;</code> in the Command Bar</li>
+  <li>Hovering over the Snippet and clicking the <code>copy</code> icon.</li>
+</ul>
+
+<p><img src="/images/snipline/search-copy.png" alt="Snippet in the Command List" /></p>
+
+<p>Read on for how to turn this into a dynamic snippet!</p>
+
+    <div class="main--pagination">
+      <a href="/desktop/basics/user-interface/" class="previous">Previous</a> <a href="/desktop/basics/dynamic-snippets/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/basics/first-snippet.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

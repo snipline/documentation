@@ -1,0 +1,26 @@
+.search--results {
+    @apply w-1/2 m-auto absolute pin-x bg-white .text-grey-darker border border-grey-light shadow-lg text-left;
+    top:50px;
+}
+.search--results h3 {
+    @apply .px-2 py-1 text-sm;
+}
+.search--result a {
+    @apply block p-2 border-t border-grey-light no-underline text-lime-darker;
+}
+.search--result a:hover {
+    @apply bg-grey-lightest;
+}
+.search--result a h4 {
+    @apply text-lime-darker;
+}
+.search--result a p {
+    @apply text-grey-darkest overflow-hidden text-sm mt-1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search--clear {
+    @apply flex m-auto justify-end absolute pin-t pin-x;
+    @apply absolute mr-2 pin-r pin-y items-center text-lime-darkest;
+    height: 34px;
+}

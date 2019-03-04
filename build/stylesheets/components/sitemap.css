@@ -1,0 +1,23 @@
+#main.content .sitemap--ul, #main.content .sitemap--ul li ul {
+    @apply .list-reset .opacity-100 .mb-0;
+}
+#main.content .sitemap--ul li h3 {
+  @apply .text-base .text-grey-darkest .my-2;
+}
+#main.content .sitemap--ul li {
+  @apply .text-base .ml-2 .mb-0;
+}
+#main.content .sitemap--ul li a, #main.content .sitemap--ul li ul li a {
+  @apply .no-underline .text-grey-darker;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+#main.content .sitemap--ul li a {
+  @apply .block .rounded .p-1;
+}
+#main.content .sitemap--ul li a:hover {
+  @apply .text-lime-dark .bg-grey-light;
+}
+.sitemap_index #main.content h2 {
+    @apply .text-xl .mb-1;
+}

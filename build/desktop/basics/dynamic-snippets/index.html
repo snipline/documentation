@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Dynamic Snippets</title>
+    <meta name="description" content="Now that we can create and copy commands, let's edit a command to make it dynamic.">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+
+  </head>
+  <body class="desktop desktop_basics desktop_basics_dynamic-snippets desktop_basics_dynamic-snippets_index">
+    <header>
+      <div class="container">
+        <h1><a href="/">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select>
+          <option>Snipline Desktop</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child active'><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li><h3>Advanced</h3></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li>
+          <li><h3>Support</h3></li>
+          <li class='child '><a href="/common/support/billing/">Billing</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>Dynamic Snippets</h1>
+    <p><em>If you haven't already, make sure you've created your <a href="/desktop/basics/02-first-snippet">first snippet</a> before continuing this tutorial.</em></p>
+
+<p>Now that we can create and copy commands, let's edit a command to make it <em>dynamic</em>.</p>
+
+<p>We can edit a snippet by hovering over it with our mouse and clicking the cogwheel icon. This will take us to the edit snippet page.</p>
+
+<p><img src="/images/snipline/edit-snippet.png" alt="Edit Snippet" /></p>
+
+<p>We'll change the snippet to this similar but slightly different command:</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>du <span class="nt">-h</span> <span class="nt">--max-depth</span><span class="o">=</span><span class="c">#{[Depth=1]} #{[Directory=.]}</span>
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Variables in Snipline start with <code>#{[</code> and end with <code>]}</code>. Inbetween here we can give the variable a description name that will help us remember what it means later on. We can also add a default value by adding an <code>=</code> after the name. In this example we've given <code>Depth</code> a default of <code>1</code> and <code>Directory</code> a default of <code>.</code> (Current directory).</p>
+
+<p>Let's test the command. Click <code>Save</code> at the bottom of the form to go back to the main UI.</p>
+
+<p>Type <code>:1</code> into the command bar (or hover over the  snippet and press the clipboard icon). We'll now be prompted to fill in the Depth and the Directory.</p>
+
+<p><img src="/images/snipline/copy-process.png" alt="Copy Process" /></p>
+
+<p>Keep the depth as <code>1</code> and press <code>Enter</code> . Next, change the directory to <code>~/</code> (Your user home directory). Now let's try pasting this command into the terminal. We can see the command that has been copied looks like this</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>du <span class="nt">-h</span> <span class="nt">--max-depth1</span> ~/
+</pre></td></tr></tbody></table></code></pre></div>
+<p><img src="/images/snipline/terminal-paste.png" alt="Terminal Preview" /></p>
+
+<p>And that's the basics of Snipline! Read on for some common examples to get started.</p>
+
+    <div class="main--pagination">
+      <a href="/desktop/basics/first-snippet/" class="previous">Previous</a> <a href="/desktop/basics/examples/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/basics/dynamic-snippets.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
