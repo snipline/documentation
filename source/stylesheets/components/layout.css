@@ -1,8 +1,7 @@
 html {
-  @apply .h-full;
 }
 body {
-  @apply .bg-grey-lightest .h-full .flex .flex-col .relative;
+  @apply .bg-grey-lightest .min-h-screen .flex .flex-col .relative;
   color: rgba(51, 53, 16, .8);
 }
 h1,h2,h3,h4,h5 {
