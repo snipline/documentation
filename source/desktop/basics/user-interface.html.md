@@ -1,5 +1,9 @@
 ---
 title: User Interface
+search_terms: "User Interface, UI"
+description: >
+  First, make sure you're signed in to your Snipline account, either on the web or download the Desktop application.
+  Snipline's main UI can be split into three segments, Search Bar, Command List, and Command Bar.
 ---
 
 First, make sure you're signed in to your Snipline account, either on the web or download the Desktop application.

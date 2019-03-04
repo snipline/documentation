@@ -1,5 +1,8 @@
 ---
 title: Variables
+search_terms: "Variables explained, How to use variables, dynamic snippets, Variable Validation, Using the same variable twice"
+description: >
+  Most the things you need to know about are covered in the basics but here are some useful tips.
 ---
 
 Most the things you need to know about are covered in the basics but here are some useful tips.

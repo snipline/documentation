@@ -1,12 +1,16 @@
 ---
 title: Introduction
+search_terms: "Getting Started, What is Snipline"
+description: >
+  Snipline is a tool for developers to store and use shell commands.
+  Most developers memorize most of their commonly used commands, but there are often long, complex, commands that are either written down or frequently googled.
 ---
 
-Snipline is a tool for developers to help store and use command snippets.
+Snipline is a tool for developers to store and use shell commands.
 
 Most developers memorize most of their commonly used commands, but there are often long, complex, commands that are either written down or frequently googled.
 
-Snipline is a tool for this exact situation. Keep all of your commands in one app which is easy to search, copy and much more.
+Snipline is built for this exact situation. Keep all of your commands in one app which is easy to search, copy and much more.
 
 The app copies commands to your clipboard so it's easy to run commands while SSH'd into servers. Just paste the result into your terminal session.
 

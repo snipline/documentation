@@ -1,5 +1,8 @@
 ---
 title: First Snippet
+search_terms: "First Snippet, Getting Started, How to use Snipline"
+description: >
+  Lets add our first snippet. If we press the green `+` icon next to the search bar we'll be greeted with the Snippet Form. Here we can fill-in the `name`, and `command`. 
 ---
 
 Lets add our first snippet. If we press the green `+` icon next to the search bar we'll be greeted with the Snippet Form. Here we can fill-in the `name`, and `command`. 

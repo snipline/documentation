@@ -1,5 +1,8 @@
 ---
 title: Windows
+search_terms: "Windows Installation, Installing on Windows, Microsoft"
+description: >
+  The Windows app can be installed from the download centre, here.
 ---
 
 The Windows app can be installed from the download centre, [here](https://desktop.downloads.snipline.io/releases/stable).

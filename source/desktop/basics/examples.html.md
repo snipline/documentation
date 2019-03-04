@@ -1,5 +1,9 @@
 ---
 title: Examples
+search_terms: "Examples, PHP Snippets, Server Snippets, Common Snippets, Magento Snippets, SQL Snippets, MySQL"
+description: >
+  Every developer's workflow and tool choices are different and so these won't be useful for everyone.
+  These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀
 ---
 
 Every developer's workflow and tool choices are different and so these won't be useful for everyone.

@@ -2,8 +2,8 @@
 title: Billing
 search_terms: "Snipline Billing Trial Cancel, Unsubscribe, Refund, Email"
 description: >
-  How long does the trial last
-  What happens when the trial is over
+  How long does the trial last?
+  What happens when the trial is over?
   How do I subscribe?
   How do I cancel?
   I want a refund

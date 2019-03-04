@@ -1,5 +1,8 @@
 ---
 title: Dynamic Snippets
+search_terms: "First Snippet, Dynamic Snippets, Getting Started, Variables"
+description: >
+  Now that we can create and copy commands, let's edit a command to make it dynamic.
 ---
 
 *If you haven't already, make sure you've created your [first snippet](/desktop/basics/02-first-snippet) before continuing this tutorial.*

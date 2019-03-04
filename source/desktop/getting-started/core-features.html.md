@@ -1,5 +1,12 @@
 ---
 title: Core Features
+search_terms: "Features, Core Features"
+description: >
+  The core features of Snipline are
+  Store, create and retrieve your own personal list of snippets
+  Variables for copying commands with unique parameter values on the fly.
+  Keyboard navigation for power-users with Vim (and non-Vim) in mind.
+  Available on any device with an internet connection
 ---
 
 The core features of Snipline are:

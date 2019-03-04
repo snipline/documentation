@@ -14,7 +14,7 @@
 }
 
 #main.content p, #main.content pre, #main.content blockquote, #main.content ul, #main.content li {
-  @apply .text-grey-darkest .leading-loose .opacity-75;
+  @apply .text-grey-darkest .leading-loose;
   font-size:1.10rem;
   /* font-family: Georgia,serif; */
 }

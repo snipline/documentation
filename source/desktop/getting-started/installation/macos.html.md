@@ -1,5 +1,8 @@
 ---
 title: MacOS
+search_terms: "MacOS Installation, Installing on Mac"
+description: >
+  The MacOS app can be installed from the download centre, here.
 ---
 
 The MacOS app can be installed from the download centre, [here](https://desktop.downloads.snipline.io/releases/stable).

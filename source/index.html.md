@@ -8,13 +8,15 @@ description: >
 
 Welcome to the Snipline Documentation.
 
-If you've just registered with Snipline, first of all, welcome! 
+If you've just registered with Snipline then first of all, welcome! 
 
-You'll want to start with the [Desktop Documentation](/desktop/getting-started/introduction/).
+You'll want to start with the Snipline [Desktop Documentation](/desktop/getting-started/introduction/).
 
-### Web app
+### Useful links
 
-Did you know you can also use Snipline in your web browser? Make sure you bookmark the web app for future use: [https://app.snipline.io/](https://app.snipline.io/).
+* Downloads: [https://desktop.downloads.snipline.io/](https://desktop.downloads.snipline.io/).
+* Web App: [https://app.snipline.io/](https://app.snipline.io/).
+* Account Management: [https://desktop.downloads.snipline.io/](https://account.snipline.io/).
 
 ### Questions
 

@@ -1,5 +1,8 @@
 ---
 title: Navigation
+search_terms: "Navigating Snipline, Vim keybinds, User Interface, UI"
+description: >
+  All the features of Snipline can be used with a mouse, and 90% of them can also be done with just the keyboard.
 ---
 
 All the features of Snipline can be used with a mouse, and 90% of them can also be done with just the keyboard.
