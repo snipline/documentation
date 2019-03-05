@@ -70,6 +70,7 @@ var SearchComponent = function() {
         view() {
             return [
                 m("div.search--wrapper", [
+                    m("clr-icon[shape=search]"),
                     m("input#search[name=search][type=search]", {value: query, oninput: function(e) { query = e.target.value; console.log(query) }}),
                     m("button", {class: (query.trim().length > 0 ) ? "search--clear" : 'hidden', onclick: function(e) { query = ""; document.getElementById("search").focus(); } }, m("clr-icon[shape=times]")),
                 ]),

@@ -20,4 +20,6 @@ You'll want to start with the Snipline [Desktop Documentation](/desktop/getting-
 
 ### Questions
 
-For questions about billing, check out the [billing section](/common/support/billing). If you have any other questions please get in touch by email at [hello@snipline.io](mailto:hello@snipline.io).
+For questions about billing, check out the [billing section](/common/support/billing). 
+
+If you have any other questions please get in touch by email at [hello@snipline.io](mailto:hello@snipline.io).
