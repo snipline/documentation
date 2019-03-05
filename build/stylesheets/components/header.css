@@ -42,8 +42,11 @@ header nav a {
 .header--search .search--wrapper {
   @apply .w-1/2 m-auto relative;
 }
+.header--search .search--wrapper clr-icon[shape=search] {
+  @apply absolute pin-y pin-l m-auto ml-2;
+}
 .header--search input {
-  @apply .bg-lime-dark .rounded .p-2 w-full;
+  @apply .bg-lime-dark .rounded .p-2 w-full pl-8;
 }
 
 @screen md {
