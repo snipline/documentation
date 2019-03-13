@@ -7,11 +7,12 @@
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Examples</title>
-    <meta name="description" content="Every developer's workflow and tool choices are different and so these won't be useful for everyone. These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀">
+    <meta name="description" content="These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀">
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
     <script src="/javascripts/clr-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
   <body class="desktop desktop_basics desktop_basics_examples desktop_basics_examples_index">
@@ -52,60 +53,64 @@
     </aside>
     <main id="main" class="content">
     <h1>Examples</h1>
-    <p>Every developer's workflow and tool choices are different and so these won't be useful for everyone.</p>
+    <p>Every developer's workflow is different. These commands will hopefully be a source of inspiration and reference for your own snippets.</p>
 
-<p>These commands will hopefully be a source of inspiration and reference for your own snippets. If you think you have a good one, why not tweet us about it? 😀</p>
+<p>If you think you have a useful command, why not <a href="https://twitter.com/sniplineapp">tweet</a> us about it? 😀</p>
 
 <h2 id="general-commands">General commands</h2>
 
 <h3 id="copying-ssh-key-to-clipboard-macos">Copying SSH key to clipboard (MacOS)</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">cat</span> ~/.ssh/#<span class="o">{[</span><span class="nv">Key</span><span class="o">=</span>id_rsa.pub]<span class="o">}</span> | pbcopy
+<p>This command copies your public key from the <code>.ssh</code> directory. Set your most commonly used key to the default.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>cat ~/.ssh/#{[Key=id_rsa.pub]} | pbcopy
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="grep---search-a-directory-for-search-term">Grep - Search a directory for search term</h3>
 
 <p>Use Grep to display files that contain a search term - optionally only output the file name (useful with cached/minified files) and filter by file type</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">grep</span> <span class="nt">-rnw</span><span class="c">#{[Only Display Filenames?=l]} '#{[Directory=./]}' -e '#{[Searchterm]}' #{[Include=--include \*.js]}</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>grep -rnw#{[Only Display Filenames?=l]} '#{[Directory=./]}' -e '#{[Searchterm]}' #{[Include=--include \*.js]}
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="curl-requests">Curl requests</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="s1">'#{[URL=https://]}'</span> <span class="nt">-X</span> <span class="s1">'#select{[Type=GET,POST,DELETE,PUT]}'</span> <span class="nt">-H</span> <span class="s1">'Authorization: Bearer #{[Auth=]}'</span>
+<p>Quickly create a curl request for a specific URL and choose any request type. Optionally set headers such as Authorization Tokens, Content-Type, etc.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl '#{[URL=https://]}' -X '#select{[Type=GET,POST,DELETE,PUT]}' -H 'Authorization: Bearer #{[Auth=]}'
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="curl-request-with-json-responses">Curl request with JSON responses</h3>
 
 <p>Use <code>jq</code> to parse <code>JSON</code> responses and store the response in a file with the date appended.</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="s1">'#{[URL=https://]}'</span> <span class="nt">-X</span> <span class="s1">'#select{[Type=GET,POST,DELETE,PUT]}'</span> <span class="nt">-H</span> <span class="s1">'Authorization: Bearer #{[Auth=]}'</span> | jq <span class="o">&gt;</span> <span class="c">#{[File=file]}-`date '+%Y-%m-%d'`.json</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl '#{[URL=https://]}' -X '#select{[Type=GET,POST,DELETE,PUT]}' -H 'Authorization: Bearer #{[Auth=]}' | jq &gt; #{[File=file]}-`date '+%Y-%m-%d'`.json
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="symlink-directory-to-another-directory-in-the-same-directory">Symlink directory to another directory in the same directory</h3>
 
 <p>If you want to create a symlink of a directory that's in the same directory e.g. public_html -&gt; web then cd into the directory and run</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>ln <span class="nt">-s</span> <span class="c">#{[Existing=web]} #{[Shortcut=public_html]}</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>ln -s #{[Existing=web]} #{[Shortcut=public_html]}
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="find-files-that-start-with-a-string">Find files that start with a string</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="c">#{[String]}\*</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>find . -type f -name #{[String]}\*
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="remove-files-that-start-with-a-string">Remove files that start with a string</h3>
 
 <p>Make sure to do a dry run with the above command first!</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>find <span class="nb">.</span> <span class="nt">-type</span> f <span class="nt">-name</span> <span class="c">#{[String]}\* -exec rm {} \;</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>find . -type f -name #{[String]}\* -exec rm {} \;
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h2 id="php-commands">PHP commands</h2>
@@ -114,30 +119,30 @@
 
 <p>Start a local php server with default port of 8000 and  /, web/, and public_html for default public directory choices.</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>php <span class="nt">-S</span> localhost:#<span class="o">{[</span><span class="nv">Port</span><span class="o">=</span>8000]<span class="o">}</span> <span class="nt">-t</span> <span class="c">#select{[Public Directory=/,web/,public_html/]}</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php -S localhost:#{[Port=8000]} -t #select{[Public Directory=/,web/,public_html/]}
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h3 id="create-a-new-admin-in-magento-2">Create a new admin in Magento 2</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>php bin/magento admin:user:create <span class="nt">--admin-user</span><span class="o">=</span><span class="s2">"#{[Username=myname]}"</span> <span class="nt">--admin-password</span><span class="o">=</span><span class="s2">"#{[Password]}"</span> <span class="nt">--admin-email</span><span class="o">=</span><span class="s2">"#{[Email=your@email]}"</span> <span class="nt">--admin-firstname</span><span class="o">=</span><span class="s2">"#{[Firstname=Name]}"</span> <span class="nt">--admin-lastname</span><span class="o">=</span><span class="s2">"#{[Lastname=Name]}"</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>php bin/magento admin:user:create --admin-user="#{[Username=myname]}" --admin-password="#{[Password]}" --admin-email="#{[Email=your@email]}" --admin-firstname="#{[Firstname=Name]}" --admin-lastname="#{[Lastname=Name]}"
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h2 id="mysql-commands">MySQL commands</h2>
 
 <h3 id="dump-a-database">Dump a database</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>mysqldump <span class="nt">-u</span> <span class="c">#{[User]} -p #{[Database]} &gt; #{[Database]}-`date '+%Y-%m-%d'`.sql</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>mysqldump -u #{[User]} -p #{[Database]} &gt; #{[Database]}-`date '+%Y-%m-%d'`.sql
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
 <h2 id="sql-commands">SQL commands</h2>
 
 <h3 id="create-a-new-database">Create a new database</h3>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>CREATE DATABASE <span class="c">#{[DB]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CREATE DATABASE #{[DB]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';
 </pre></td></tr></tbody></table></code></pre></div><p><br /></p>
 
     <div class="main--pagination">

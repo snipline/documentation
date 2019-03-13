@@ -12,6 +12,7 @@
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
     <script src="/javascripts/clr-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
   <body class="desktop desktop_advanced desktop_advanced_variables desktop_advanced_variables_index">
@@ -62,8 +63,8 @@
 
 <p>After you fill in the value all references are changed to the same text.</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>CREATE DATABASE <span class="c">#{[DB=snipline]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>CREATE DATABASE #{[DB=snipline]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';
 </pre></td></tr></tbody></table></code></pre></div>
 <p>Using DB=snipline, User=mitch, Password=badpassword will result in the following:</p>
 
@@ -83,16 +84,16 @@
 
 <p>With that in mind, the following are invalid:</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
-</pre></td><td class="rouge-code"><pre><span class="c"># Invalid because default is set after first instance</span>
-<span class="nb">echo</span> <span class="s1">'#{[Variable]} #{[Variable=default]}'</span>
+</pre></td><td class="rouge-code"><pre># Invalid because default is set after first instance
+echo '#{[Variable]} #{[Variable=default]}'
 
-<span class="c"># Invalid because two different defaults are set for the same variable</span>
-<span class="nb">echo</span> <span class="s1">'#{[Variable=first]} #{[Variable=second]}'</span>
+# Invalid because two different defaults are set for the same variable
+echo '#{[Variable=first]} #{[Variable=second]}'
 </pre></td></tr></tbody></table></code></pre></div>
 <p>Read the next chapter to find out how to use multi-choice preset variables.</p>
 

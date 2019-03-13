@@ -12,6 +12,7 @@
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
     <script src="/javascripts/clr-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
   <body class="desktop desktop_basics desktop_basics_dynamic-snippets desktop_basics_dynamic-snippets_index">
@@ -62,8 +63,8 @@
 
 <p>We'll change the snippet to this similar but slightly different command:</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>du <span class="nt">-h</span> <span class="nt">--max-depth</span><span class="o">=</span><span class="c">#{[Depth=1]} #{[Directory=.]}</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>du -h --max-depth=#{[Depth=1]} #{[Directory=.]}
 </pre></td></tr></tbody></table></code></pre></div>
 <p>Variables in Snipline start with <code>#{[</code> and end with <code>]}</code>. Inbetween here we can give the variable a description name that will help us remember what it means later on. We can also add a default value by adding an <code>=</code> after the name. In this example we've given <code>Depth</code> a default of <code>1</code> and <code>Directory</code> a default of <code>.</code> (Current directory).</p>
 
@@ -75,8 +76,8 @@
 
 <p>Keep the depth as <code>1</code> and press <code>Enter</code> . Next, change the directory to <code>~/</code> (Your user home directory). Now let's try pasting this command into the terminal. We can see the command that has been copied looks like this</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>du <span class="nt">-h</span> <span class="nt">--max-depth1</span> ~/
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>du -h --max-depth=1 ~/
 </pre></td></tr></tbody></table></code></pre></div>
 <p><img src="/images/snipline/terminal-paste.png" alt="Terminal Preview" /></p>
 

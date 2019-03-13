@@ -12,6 +12,7 @@
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
     <script src="/javascripts/clr-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
   <body class="desktop desktop_advanced desktop_advanced_multi-choice desktop_advanced_multi-choice_index">
@@ -56,13 +57,13 @@
 
 <p>In this example, <code>URL</code> is a regular variable with a default of <code>https://</code>. Instead of using regular variables for <code>Request Type</code> and <code>Content-Type</code>, they specify a list of options to choose from.</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="s1">'#{[URL=https://]}'</span> <span class="nt">-X</span> <span class="s1">'#select{[Request Type=GET,POST,DELETE,PUT]}'</span> <span class="nt">-H</span> <span class="s1">'Content-Type: #select{[Content Type=application/json,text/html;charset=utf-8]}'</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>curl '#{[URL=https://]}' -X '#select{[Request Type=GET,POST,DELETE,PUT]}' -H 'Content-Type: #select{[Content Type=application/json,text/html;charset=utf-8]}'
 </pre></td></tr></tbody></table></code></pre></div>
 <p>The Syntax for a multi-choice preset is</p>
 
-<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="c">#select{[Name=option 1,option 2,option 3]}</span>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>#select{[Name=option 1,option 2,option 3]}
 </pre></td></tr></tbody></table></code></pre></div>
 <p>Notice the <code>select</code> keyword and each option is listed after the <code>=</code> and seperated by <code>,</code>.</p>
 
