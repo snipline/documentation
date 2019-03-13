@@ -15,7 +15,7 @@ While on the main section of Snipline (and not focused in the Search Bar or Comm
 
 From here you can use `Tab` and `Shift+Tab` to cycle through the text fields.
 
-You can either write dynamic variables by typing them manually (`#{[Variable Name=Default Value]}` and `#select{[Choice Name=value 1,value 2]}`) or use `Tab` to cycle to the variable name button and press `Enter` to append them to your command.
+You can either write dynamic variables by typing them manually (`#{[Variable Name=Default Value]}` and `#select{[Choice Name=value 1,value 2]}`) or use `Tab` to cycle to the `New Variable` button and press `Enter` to append them to your command.
 
 When focused on the "advanced options" button, pressing `Enter` will bring up the advanced options which you can then use tab to cycle through as well.
 

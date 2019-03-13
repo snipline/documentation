@@ -36,7 +36,7 @@ Not only this, you can also specify multi-choice variables. For example, in a CU
 
 Try the command above in your own Snipline app with the following:
 
-~~~bash
+~~~snipline
 # For bash shell users
 mysqldump -u #{[User=user]} -p #{[Database=database]} > #{[Database]}-`date '+%Y-%m-%d'`.sql
 # For Fish shell users

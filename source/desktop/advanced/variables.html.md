@@ -15,7 +15,7 @@ In the example below, `DB` is set with a default of `snipline` so the first time
 
 After you fill in the value all references are changed to the same text.
 
-~~~bash
+~~~snipline
 CREATE DATABASE #{[DB=snipline]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';
 ~~~
 
@@ -36,7 +36,7 @@ There are somethings you *can't* do with variables. These include:
 
 With that in mind, the following are invalid:
 
-~~~bash
+~~~snipline
 # Invalid because default is set after first instance
 echo '#{[Variable]} #{[Variable=default]}'
 

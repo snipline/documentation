@@ -9,13 +9,13 @@ Sometimes you might have a set of values that are often used interchangably. Mul
 
 In this example, `URL` is a regular variable with a default of `https://`. Instead of using regular variables for `Request Type` and `Content-Type`, they specify a list of options to choose from.
 
-~~~bash
+~~~snipline
 curl '#{[URL=https://]}' -X '#select{[Request Type=GET,POST,DELETE,PUT]}' -H 'Content-Type: #select{[Content Type=application/json,text/html;charset=utf-8]}'
 ~~~
 
 The Syntax for a multi-choice preset is
 
-~~~bash
+~~~snipline
 #select{[Name=option 1,option 2,option 3]}
 ~~~
 

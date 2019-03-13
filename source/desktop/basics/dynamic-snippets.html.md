@@ -15,7 +15,7 @@ We can edit a snippet by hovering over it with our mouse and clicking the cogwhe
 
 We'll change the snippet to this similar but slightly different command:
 
-~~~bash
+~~~snipline
 du -h --max-depth=#{[Depth=1]} #{[Directory=.]}
 ~~~
 
@@ -30,8 +30,8 @@ Type `:1` into the command bar (or hover over the  snippet and press the clipboa
 
 Keep the depth as `1` and press `Enter` . Next, change the directory to `~/` (Your user home directory). Now let's try pasting this command into the terminal. We can see the command that has been copied looks like this
 
-~~~bash
-du -h --max-depth1 ~/
+~~~snipline
+du -h --max-depth=1 ~/
 ~~~
 
 ![Terminal Preview](/images/snipline/terminal-paste.png)
