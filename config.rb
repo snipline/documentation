@@ -36,6 +36,7 @@ set :markdown_engine, :kramdown
 
 # With alternative layout
 page '/desktop/**/*', layout: 'layouts/desktop'
+page '/snipbar/**/*', layout: 'layouts/snipbar'
 page '/sitemap', layout: 'layouts/desktop'
 
 helpers do

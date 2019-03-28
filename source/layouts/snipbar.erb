@@ -38,24 +38,24 @@
     <aside>
       <nav>
         <select id="ProductSwitcher" name="productSwitcher">
-          <option selected value="/desktop/getting-started/introduction">Snipline Desktop</option>
-          <option value="/snipbar/getting-started/introduction">Snipbar</option>
+          <option value="/desktop/getting-started/introduction">Snipline Desktop</option>
+          <option selected value="/snipbar/getting-started/introduction">Snipbar</option>
         </select>
         <ul>
           <li><h3>Getting Started</h3></li>
-          <%= tree_to_html(data.tree['desktop']['getting-started']) %>
+          <%= tree_to_html(data.tree['snipbar']['getting-started']) %>
           <li><h3>Basics</h3></li>
-          <%= tree_to_html(data.tree['desktop']['basics']) %>
-          <li><h3>Advanced</h3></li>
-          <%= tree_to_html(data.tree['desktop']['advanced']) %>
-          <li><h3>Support</h3></li>
-          <%= tree_to_html(data.tree['common']['support']) %>
+          <%= tree_to_html(data.tree['snipbar']['basics']) %>
         </ul>
       </nav>
     </aside>
     <main id="main" class="content">
     <h1><%= current_page.data.title %></h1>
     <%= yield %>
+    <div class="main--pagination">
+      <%= previous_link(data.tree) %> <%= next_link(data.tree) %>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/<%= current_page.path %>.md" target="_blank">Submit an issue/pull request!</a></em></div>
     </main>
     </div><!-- container -->
     <footer>
@@ -74,3 +74,4 @@
 
   </body>
 </html>
+

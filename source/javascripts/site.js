@@ -82,8 +82,14 @@ var SearchComponent = function() {
 document.addEventListener('DOMContentLoaded', function(){ 
 }, false);
 
+function changeEventHandler(event) {
+    // You can use “this” to refer to the selected element.
+    window.location.href = event.target.value
+}
+
 document.addEventListener("turbolinks:load", function() {
     console.log("loading...")
+    document.querySelector('select[name="productSwitcher"]').onchange=changeEventHandler;
     // var SearchRoot = document.getElementById("searchbar");
     // m.mount(SearchRoot, SearchComponent);
 })

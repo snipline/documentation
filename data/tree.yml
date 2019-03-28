@@ -18,6 +18,13 @@ desktop:
     variables.html.md: "/desktop/advanced/variables.html.md"
     multi-choice.html.md: "/desktop/advanced/multi-choice.html.md"
     navigation.html.md: "/desktop/advanced/navigation.html.md"
+snipbar:
+  getting-started:
+    introduction.html.md: "/snipbar/getting-started/introduction.html.md"
+    setup.html.md: "/snipbar/getting-started/setup.html.md"
+  basics:
+    user-interface.html.md: "/snipbar/basics/user-interface.html.md"
+    navigation.html.md: "/snipbar/basics/navigation.html.md"
 common:
   support:
     billing.html.md: "/common/support/billing.html.md"
