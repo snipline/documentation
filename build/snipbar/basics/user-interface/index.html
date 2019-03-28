@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>User Interface</title>
+    <meta name="description" content="">
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+    <script src="/javascripts/custom-elements.min.js"></script>
+    <script src="/javascripts/clr-icons.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
+
+  </head>
+  <body class="snipbar snipbar_basics snipbar_basics_user-interface snipbar_basics_user-interface_index">
+    <header>
+      <div class="container">
+        <h1><a href="/" title="Snipline Docs">Snipline Docs</a></h1>
+        <div id="searchbar" class="header--search"></div>
+        <nav class="desktop">
+          <ul>
+          <li><a href="https://snipline.io">Snipline</a></li>
+          <li><a href="mailto:hello@snipline.io">Support</a></li>
+          </ul>
+        </nav>
+        <nav class="mobile">
+          <ul>
+          <li><a href="/sitemap"><clr-icon shape="menu"></clr-icon></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="layout container">
+    <aside>
+      <nav>
+        <select id="ProductSwitcher" name="productSwitcher">
+          <option value="/desktop/getting-started/introduction">Snipline Desktop</option>
+          <option selected value="/snipbar/getting-started/introduction">Snipbar</option>
+        </select>
+        <ul>
+          <li><h3>Getting Started</h3></li>
+          <li class='child '><a href="/snipbar/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/snipbar/getting-started/setup/">Setup</a></li>
+          <li><h3>Basics</h3></li>
+          <li class='child active'><a href="/snipbar/basics/user-interface/">User Interface</a></li><li class='child '><a href="/snipbar/basics/navigation/">Navigation</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main" class="content">
+    <h1>User Interface</h1>
+    <p>Snipbar's menu window contains three main interface elements: the search, the preferences button, and the snippet table.</p>
+
+<p><img src="/images/snipbar/interface.png" alt="Interface" /></p>
+
+<p>Searching automatically filters the snippets</p>
+
+<p><img src="/images/snipbar/search.png" alt="Search" /></p>
+
+<p>You can switch to the snippet table by pressing <code>Tab</code>. From here, you can use <code>j</code>/<code>k</code> or <code>up</code>/<code>down</code> to move between snippets.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/videos/selecting-snippets.mp4" type="video/mp4" />
+  <!-- <source src="myVideo.webm" type="video/webm"> -->
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="/videos/selecting-snippets.mp4">link to the video</a> instead.</p>
+</video>
+
+<p>You can copy a snippet by double-clicking or pressing <code>Enter</code>.</p>
+
+<p>If the snippet has a dynamic parameter you can update the text for each parameter and press <code>Enter</code> to continue.</p>
+
+<video autoplay="" loop="" muted="" playsinline="">
+  <source src="/videos/snipbar-example.mp4" type="video/mp4" />
+  <!-- <source src="myVideo.webm" type="video/webm"> -->
+  <p>Your browser doesn't support HTML5 video. Here is
+     a <a href="/videos/snipbar-example.mp4">link to the video</a> instead.</p>
+</video>
+
+<p>Read on for more navigation tips.</p>
+
+    <div class="main--pagination">
+      <a href="/snipbar/getting-started/setup/" class="previous">Previous</a> <a href="/snipbar/basics/navigation/" class="next">Next</a>
+    </div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/snipbar/basics/user-interface.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    </main>
+    </div><!-- container -->
+    <footer>
+    <div class="container">
+      <ul>
+        <li><a href="https://snipline.io/pricing">Pricing</a></li>
+        <li><a href="https://snipline.io/features">Features</a></li>
+        <li><a href="https://docs.snipline.io">Docs</a></li>
+        <li><a href="https://desktop.downloads.snipline.io">Downloads</a></li>
+        <li><a href="https://snipline.io/terms">Terms</a></li>
+        <li><a href="https://snipline.io/privacy">Privacy</a></li>
+      </ul>
+      <p>&copy; 2019, Snipline. All Rights Reserved</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
