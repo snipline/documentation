@@ -6,8 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Dynamic Snippets</title>
-    <meta name="description" content="Now that we can create and copy commands, let's edit a command to make it dynamic.">
+    <title>Passwords</title>
+    <meta name="description" content="How to generate passwords randomly for shell commands">
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
-  <body class="desktop desktop_basics desktop_basics_dynamic-snippets desktop_basics_dynamic-snippets_index">
+  <body class="desktop desktop_advanced desktop_advanced_passwords desktop_advanced_passwords_index">
     <header>
       <div class="container">
         <h1><a href="/" title="Snipline Docs">Snipline Docs</a></h1>
@@ -44,50 +44,49 @@
           <li><h3>Getting Started</h3></li>
           <li class='child '><a href="/desktop/getting-started/introduction/">Introduction</a></li><li class='child '><a href="/desktop/getting-started/core-features/">Core Features</a></li><li class='parent'><span class='parent-label'>Installation</span><ul><li class='child '><a href="/desktop/getting-started/installation/macos/">MacOS</a></li><li class='child '><a href="/desktop/getting-started/installation/windows/">Windows</a></li><li class='child '><a href="/desktop/getting-started/installation/linux/">Linux</a></li></ul></li><li class='child '><a href="/desktop/getting-started/web-client/">Web Client</a></li>
           <li><h3>Basics</h3></li>
-          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child active'><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
+          <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
           <li><h3>Advanced</h3></li>
-          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li><li class='child '><a href="/desktop/advanced/search/">Search</a></li><li class='child '><a href="/desktop/advanced/tags/">Tags</a></li><li class='child '><a href="/desktop/advanced/passwords/">Passwords</a></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li><li class='child '><a href="/desktop/advanced/search/">Search</a></li><li class='child '><a href="/desktop/advanced/tags/">Tags</a></li><li class='child active'><a href="/desktop/advanced/passwords/">Passwords</a></li>
           <li><h3>Support</h3></li>
           <li class='child '><a href="/common/support/billing/">Billing</a></li>
         </ul>
       </nav>
     </aside>
     <main id="main" class="content">
-    <h1>Dynamic Snippets</h1>
-    <p><em>If you haven't already, make sure you've created your <a href="/desktop/basics/02-first-snippet">first snippet</a> before continuing this tutorial.</em></p>
-
-<p>Now that we can create and copy commands, let's edit a command to make it <em>dynamic</em>.</p>
-
-<p>We can edit a snippet by hovering over it with our mouse and clicking the cogwheel icon. This will take us to the edit snippet page.</p>
-
-<p><img src="/images/snipline/edit-snippet.png" alt="Edit Snippet" /></p>
-
-<p>We'll change the snippet to this similar but slightly different command:</p>
+    <h1>Passwords</h1>
+    <p>In some situations it's beneficial to be able to generate random text or passwords. With Snipline you can create unique strings for each command with the password syntax.</p>
 
 <div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>du -h --max-depth=#{[Depth=1]} #{[Directory=.]}
+2
+</pre></td><td class="rouge-code"><pre>#password{[Name,16]}
+// outputs =&gt; W[Oi*XRONSgQi\)q
 </pre></td></tr></tbody></table></code></pre></div>
-<p>Variables in Snipline start with <code>#{[</code> and end with <code>]}</code>. Inbetween here we can give the variable a description name that will help us remember what it means later on. We can also add a default value by adding an <code>=</code> after the name. In this example we've given <code>Depth</code> a default of <code>1</code> and <code>Directory</code> a default of <code>.</code> (Current directory).</p>
+<p>The first parameter (<code>Name</code>) is the reference name to the password, and the second parameter is the length.</p>
 
-<p>Let's test the command. Click <code>Save</code> at the bottom of the form to go back to the main UI.</p>
-
-<p>Type <code>:1</code> into the command bar (or hover over the  snippet and press the clipboard icon). We'll now be prompted to fill in the Depth and the Directory.</p>
-
-<p><img src="/images/snipline/copy-process.png" alt="Copy Process" /></p>
-
-<p>Keep the depth as <code>1</code> and press <code>Enter</code> . Next, change the directory to <code>~/</code> (Your user home directory). Now let's try pasting this command into the terminal. We can see the command that has been copied looks like this</p>
+<p>The reference name is useful if you wish to use the same password more than once in a snippet. The second reference does not include a length.</p>
 
 <div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>du -h --max-depth=1 ~/
+2
+</pre></td><td class="rouge-code"><pre>firstcommand "#password{[Name,16]}" &gt; secondcommand "#password{[Name]}"
+// outputs =&gt; firstcommand "aq}PIjhqi;HOilAy" &gt; secondcommand "aq}PIjhqi;HOilAy"
 </pre></td></tr></tbody></table></code></pre></div>
-<p><img src="/images/snipline/terminal-paste.png" alt="Terminal Preview" /></p>
+<p>With this in mind, you can have multiple passwords in a snippet by giving them different reference names.</p>
 
-<p>And that's the basics of Snipline! Read on for some common examples to get started.</p>
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>firstcommand "#password{[Name,8]}" &amp;&amp; secondcommand "#password{[Name]}" &amp;&amp; thirdcommand "#password{[Third,6]}"
+// outputs =&gt; firstcommand "CVq(%Ajn" &amp;&amp; secondcommand "CVq(%Ajn" &amp;&amp; thirdcommand "wRg^a:"
+</pre></td></tr></tbody></table></code></pre></div>
+<h2 id="settings">Settings</h2>
+
+<p>By default if you do not pass a length the string will fallback to a length of 16.</p>
+
+<p>Further configuration, such as adding symbols, numbers, and mixed-case letters can be updated in the Settings page (Under the Quick Menu &gt; Settings or by pressing the <code>c</code> shortcut).</p>
 
     <div class="main--pagination">
-      <a href="/desktop/basics/first-snippet/" class="previous">Previous</a> <a href="/desktop/basics/examples/" class="next">Next</a>
+      <a href="/desktop/advanced/tags/" class="previous">Previous</a> <a href="/snipbar/getting-started/introduction/" class="next">Next</a>
     </div>
-    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/basics/dynamic-snippets.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/advanced/passwords.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
     </main>
     </div><!-- container -->
     <footer>
