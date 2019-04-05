@@ -18,6 +18,8 @@ desktop:
     variables.html.md: "/desktop/advanced/variables.html.md"
     multi-choice.html.md: "/desktop/advanced/multi-choice.html.md"
     navigation.html.md: "/desktop/advanced/navigation.html.md"
+    search.html.md: "/desktop/advanced/search.html.md"
+    tags.html.md: "/desktop/advanced/tags.html.md"
 snipbar:
   getting-started:
     introduction.html.md: "/snipbar/getting-started/introduction.html.md"
