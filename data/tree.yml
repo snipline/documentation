@@ -20,6 +20,7 @@ desktop:
     navigation.html.md: "/desktop/advanced/navigation.html.md"
     search.html.md: "/desktop/advanced/search.html.md"
     tags.html.md: "/desktop/advanced/tags.html.md"
+    passwords.html.md: "/desktop/advanced/passwords.html.md"
 snipbar:
   getting-started:
     introduction.html.md: "/snipbar/getting-started/introduction.html.md"
