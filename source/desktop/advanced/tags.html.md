@@ -7,14 +7,18 @@ description: >
 
 Tags can be added and removed from snippets from the Snippet Form.
 
-Image of snippet form.
+<div class="w-1/2 mx-auto text-center">
+<img src="/images/snipline/tags-form.png" alt="Tags form">
+</div>
 
 Use the tab key or comma to create the tag and then save it.
 
 Once it is saved you can filter by tags in the search bar. 
 
-Image of searching by tag
+~~~bash
+tags:sql
+~~~
 
-Note that this functionality requires Advanced Search to be enabled from the settings menu.
-
-[Click here to learn more about advanced search](/desktop/advanced/search)
+<div class="w-1/2 mx-auto text-center">
+<img src="/images/snipline/searching-tags.png" alt="Searching Tags">
+</div>

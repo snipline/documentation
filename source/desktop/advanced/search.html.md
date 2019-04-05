@@ -5,15 +5,9 @@ description: >
     How to enable and search complex queries or requirements.
 ---
 
-By default Snipline searches the name, command, and alias for a match against your search term.
+By default Snipline searches the name, command, alias, and tags for a match against your search term. As of 0.7.0 Snipline uses [Lunr.js](https://github.com/olivernn/lunr.js) for searching.
 
-This basic search can work fairly well for most use-cases, however, if you want more control over how you search then you can enable the "Advanced Search" within the settings of Snipline.
-
-Configuration menu image here
-
-With Advanced Search enabled, you have the power of [Lunr.js](https://github.com/olivernn/lunr.js).
-
-With that in mind you can use the following syntax to search
+With that in mind you can use the following syntax to search:
 
 * `+` - word must appear in results. E.g. `+sql`.
 * `-` - word must not appear in results. E.g. `-git`.
@@ -65,9 +59,7 @@ magneto~1
 
 ## Escaping search syntax
 
-Sometimes you may wish to search dashes (`-`) or other characters that are used in the Lunr search syntax.
-
-To do this, use a backslash (`\`) before the character you wish to keep
+When you wish to search dashes (`-`) or other characters that are used in the Lunr search syntax you can use a backslash (`\`) before the character you wish to keep.
 
 ~~~
 git \-\-log
