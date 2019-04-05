@@ -6,8 +6,8 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title>Variables</title>
-    <meta name="description" content="Most the things you need to know about are covered in the basics but here are some useful tips.">
+    <title>Search</title>
+    <meta name="description" content="How to enable and search complex queries or requirements.">
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <script src="/javascripts/site.js"></script>
     <script src="/javascripts/custom-elements.min.js"></script>
@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet"> 
 
   </head>
-  <body class="desktop desktop_advanced desktop_advanced_variables desktop_advanced_variables_index">
+  <body class="desktop desktop_advanced desktop_advanced_search desktop_advanced_search_index">
     <header>
       <div class="container">
         <h1><a href="/" title="Snipline Docs">Snipline Docs</a></h1>
@@ -46,62 +46,81 @@
           <li><h3>Basics</h3></li>
           <li class='child '><a href="/desktop/basics/user-interface/">User Interface</a></li><li class='child '><a href="/desktop/basics/first-snippet/">First Snippet</a></li><li class='child '><a href="/desktop/basics/dynamic-snippets/">Dynamic Snippets</a></li><li class='child '><a href="/desktop/basics/examples/">Examples</a></li>
           <li><h3>Advanced</h3></li>
-          <li class='child active'><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li><li class='child '><a href="/desktop/advanced/search/">Search</a></li><li class='child '><a href="/desktop/advanced/tags/">Tags</a></li>
+          <li class='child '><a href="/desktop/advanced/variables/">Variables</a></li><li class='child '><a href="/desktop/advanced/multi-choice/">Multi-Choice Presets</a></li><li class='child '><a href="/desktop/advanced/navigation/">Navigation</a></li><li class='child active'><a href="/desktop/advanced/search/">Search</a></li><li class='child '><a href="/desktop/advanced/tags/">Tags</a></li>
           <li><h3>Support</h3></li>
           <li class='child '><a href="/common/support/billing/">Billing</a></li>
         </ul>
       </nav>
     </aside>
     <main id="main" class="content">
-    <h1>Variables</h1>
-    <p>Most the things you need to know about are covered in the basics but here are some useful tips.</p>
+    <h1>Search</h1>
+    <p>By default Snipline searches the name, command, alias, and tags for a match against your search term. As of 0.7.0 Snipline uses <a href="https://github.com/olivernn/lunr.js">Lunr.js</a> for searching.</p>
 
-<h2 id="using-the-same-variable-twice">Using the same variable twice</h2>
-
-<p>If, for example, you need to reference a database name more than once in a Snippet it's very easy to do so. Just add in the variable name without the default parameter where needed.</p>
-
-<p>In the example below, <code>DB</code> is set with a default of <code>snipline</code> so the first time it pops up in the copy modal you'll see <code>snipline</code> pre-filled.</p>
-
-<p>After you fill in the value all references are changed to the same text.</p>
-
-<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>CREATE DATABASE #{[DB=snipline]};create user #{[User]}; grant all on #{[DB]}.* to '#{[User]}'@'localhost' identified by '#{[Password]}';
-</pre></td></tr></tbody></table></code></pre></div>
-<p>Using DB=snipline, User=mitch, Password=badpassword will result in the following:</p>
-
-<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>CREATE DATABASE snipline;create user mitch; grant all on snipline.* to 'mitch'@'localhost' identified by 'badpassword';
-</pre></td></tr></tbody></table></code></pre></div>
-<p>Notice how that both instances of <code>DB</code> and <code>User</code> have been updated.</p>
-
-<h2 id="variable-validation">Variable Validation</h2>
-
-<p>There are somethings you <em>can't</em> do with variables. These include:</p>
+<p>With that in mind you can use the following syntax to search:</p>
 
 <ul>
-  <li>Using the same variable twice with more than one default value.</li>
-  <li>Specifying the default value after the first instance of the variable.</li>
+  <li><code>+</code> - word must appear in results. E.g. <code>+sql</code>.</li>
+  <li><code>-</code> - word must not appear in results. E.g. <code>-git</code>.</li>
+  <li><code>*</code> - Wildcard. E.g. <code>grep*</code>, <code>*sql</code>, <code>*sh*</code>.</li>
+  <li><code>~&lt;number&gt;</code> - Fuzzy matches. E.g. <code>gyt~1</code></li>
 </ul>
 
-<p>With that in mind, the following are invalid:</p>
+<h2 id="searching-specific-attributes">Searching specific attributes</h2>
+
+<p>The following attributes can be searched</p>
+
+<ul>
+  <li><code>name</code> - The name of the snippet.</li>
+  <li><code>docs</code> - The snippet documentation.</li>
+  <li><code>alias</code> - The snippet alias.</li>
+  <li><code>command</code> - The command associated with the snippet.</li>
+  <li><code>tags</code> - The tags associated with the snippet.</li>
+</ul>
+
+<p>For example, you can search for all of the snippets that are tagged <code>sql</code> like this.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>tags:sql
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Another example, you want to search documentation that contains the word Linux or unix, you could do the following</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docs:*nix
+</pre></td></tr></tbody></table></code></pre></div>
+<h2 id="more-example-searches">More example searches</h2>
+
+<p>Search for snippet that contains git but not log</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git -log
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Search for a curl command that must include auth</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>command:curl +auth*
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Search for misspelled or uncertain text</p>
 
 <div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3
-4
-5
-</pre></td><td class="rouge-code"><pre># Invalid because default is set after first instance
-echo '#{[Variable]} #{[Variable=default]}'
-
-# Invalid because two different defaults are set for the same variable
-echo '#{[Variable=first]} #{[Variable=second]}'
+</pre></td><td class="rouge-code"><pre>magneto~1
+# results matching magento
 </pre></td></tr></tbody></table></code></pre></div>
-<p>Read the next chapter to find out how to use multi-choice preset variables.</p>
+<h2 id="escaping-search-syntax">Escaping search syntax</h2>
+
+<p>When you wish to search dashes (<code>-</code>) or other characters that are used in the Lunr search syntax you can use a backslash (<code>\</code>) before the character you wish to keep.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git \-\-log
+</pre></td></tr></tbody></table></code></pre></div>
+<h2 id="more-information">More information</h2>
+
+<p>For more information on using Lunr, <a href="https://lunrjs.com/guides/searching.html">check out their searching documentation</a>.</p>
 
     <div class="main--pagination">
-      <a href="/desktop/basics/examples/" class="previous">Previous</a> <a href="/desktop/advanced/multi-choice/" class="next">Next</a>
+      <a href="/desktop/advanced/navigation/" class="previous">Previous</a> <a href="/desktop/advanced/tags/" class="next">Next</a>
     </div>
-    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/advanced/variables.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
+    <div class="main--edit"><em>Found an issue with our documentation? <a href="https://github.com/snipline/documentation/blob/master/source/desktop/advanced/search.html.md" target="_blank">Submit an issue/pull request!</a></em></div>
     </main>
     </div><!-- container -->
     <footer>
