@@ -1,6 +1,6 @@
 ---
 title: Linux
-search_terms: "Linux, Debian, Ubuntu, .deb, Install, Installation"
+search_terms: "Linux, Debian, Ubuntu, .deb, Install, Installation, Fedora, .rpm"
 description: >
   Snipline Desktop supports Debian based Linux systems. This includes Ubuntu, Mint, Elementary OS and more.
 ---
@@ -90,3 +90,39 @@ Change the Command property to
 In the permissions tab make sure "Allow executing file as program" is checked.
 
 You should then be able to run Snipline
+
+### Fedora / Redhat (Beta)
+
+The Fedora version of Snipline uses [Nativefier](https://github.com/jiahaog/Nativefier) to load the latest version of Snipline.
+
+The following has worked on Fedora 29.
+
+~~~bash
+# install Nativefier/Electron dependency
+pkcon install libXScrnSaver 
+
+# Download Snipline to your home directory
+cd ~/ && wget https://docs.snipline.io/media/snipline-fedora-linux-x64.tar.gz
+
+# Extract
+tar -xvzf snipline-fedora-linux-x64.tar.gz
+
+# Create desktop file
+touch ~/.local/share/applications/snipline.desktop
+~~~
+
+Add the following to your .desktop file, updating the execution path as preferred
+
+~~~
+[Desktop Entry]
+Name=Snipline
+Comment=Snipline
+GenericName=snipline
+Exec=/home/user/snipline-fedora-linx-x64/snipline
+Icon=snipline
+Type=Application
+StartupNotify=true
+Categories=Utility;
+~~~
+
+Now you should be able to run Snipline!
