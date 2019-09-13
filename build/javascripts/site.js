@@ -5908,6 +5908,6 @@ require.alias("turbolinks/dist/turbolinks.js", "turbolinks");require.register("_
 });})();require('___globals___');
 
 'use strict';
-/* jshint ignore:end */
+
 ;require('source/javascripts/site');
 //# sourceMappingURL=site.js.map
