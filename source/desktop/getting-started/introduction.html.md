@@ -6,7 +6,7 @@ description: >
   Most developers memorize most of their commonly used commands, but there are often long, complex, commands that are either written down or frequently googled.
 ---
 
-<iframe src="https://player.vimeo.com/video/382386070" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xoSBHPe5rcw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Snipline is a tool for developers to store and use shell commands.
 
