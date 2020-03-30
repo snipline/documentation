@@ -9,7 +9,9 @@ All the features of Snipline can be used with a mouse, and 90% of them can also 
 
 ## Creating a new snippet
 
-<div style="width:100%;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316532186?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:100%;text-align:center;margin:auto;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iRV8offKPfs?autoplay=1&cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 
 While on the main section of Snipline (and not focused in the Search Bar or Command Bar) press `n` to bring up the new snippet form.
 
@@ -23,11 +25,11 @@ To save the snippet, use `Tab` to cycle to the `Save` button and press `Enter`.
 
 To go back without saving, first press `Esc` to unfocus any form elements and then press `Backspace`.
 
-<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316534234?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:400px;text-align:center;margin:auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/wwg5KkI5bXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Editing an existing snippet
 
-<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316534973?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:400px;text-align:center;margin:auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/fCFKn8Am0ks" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Editing an existing snippet works the same as creating a new snippet.
 
@@ -47,15 +49,15 @@ If there is more than one result you can then type `:<number>` to choose a comma
 
 Alternatively, if you have set an `alias` for a command you can copy this command with `:ya<alias>` edit it with `:ea<alias>`, or pin with `:pa<alias>`.
 
-<div style="width:400px;text-align:center;margin:auto;text-align:center;"><iframe src="https://player.vimeo.com/video/316535550?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:400px;text-align:center;margin:auto;text-align:center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/Cn4YO47pWJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 If you want to browse your snippets, you can use the `down`/`up` keys on your keyboard (or `j` / `k` for Vim users). For faster scrolling use `Ctrl+d` and `Ctrl+u`.
 
 Pressing `Tab` will cycle through focusable elements. Each snippet can be focused and pressing `Enter` will start the copy process.
 
-<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316540926?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:400px;text-align:center;margin:auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/SVuZFDTBbFo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Finally, to jump back to the top of your list press `g+g` (`g` twice in quick succession). and to jump to the bottom use `shift+g`.
 
-<div style="width:400px;text-align:center;margin:auto;"><iframe src="https://player.vimeo.com/video/316541230?autoplay=true&loop=true&color=94AB0D&byline=false&transparent=true" width="400" height="500" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div style="width:400px;text-align:center;margin:auto;"><iframe width="560" height="315" src="https://www.youtube.com/embed/U_JFJBfCWg4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
