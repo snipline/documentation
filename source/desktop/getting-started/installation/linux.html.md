@@ -101,11 +101,11 @@ The following has worked on Fedora 29.
 # install Nativefier/Electron dependency
 pkcon install libXScrnSaver 
 
-# Download Snipline to your home directory
-cd ~/ && wget https://docs.snipline.io/media/snipline-fedora-linux-x64.tar.gz
+# Download Snipline to your home directory (Or preferred location)
+mkdir ~/snipline cd ~/snipline && wget https://docs.snipline.io/media/snipline-linux-x64.tgz
 
 # Extract
-tar -xvzf snipline-fedora-linux-x64.tar.gz
+tar -xvzf snipline-linux-x64.tgz
 
 # Create desktop file
 touch ~/.local/share/applications/snipline.desktop
@@ -118,11 +118,40 @@ Add the following to your .desktop file, updating the execution path as preferre
 Name=Snipline
 Comment=Snipline
 GenericName=snipline
-Exec=/home/user/snipline-fedora-linx-x64/snipline
+Exec=/home/user/snipline/snipline
 Icon=snipline
 Type=Application
 StartupNotify=true
 Categories=Utility;
 ~~~
 
-Now you should be able to run Snipline!
+### Arch / Manjaro (Beta)
+
+The Arch version of Snipline uses [Nativefier](https://github.com/jiahaog/Nativefier) to load the latest version of Snipline.
+
+The following has worked on Manjaro.
+
+~~~bash
+# Download Snipline to your home directory (Or preferred location)
+mkdir ~/snipline cd ~/snipline && wget https://docs.snipline.io/media/snipline-linux-x64.tgz
+
+# Extract
+tar -xvzf snipline-linux-x64.tgz
+
+# Create desktop file
+touch /usr/local/share/applications/snipline.desktop
+~~~
+
+Add the following to your .desktop file, updating the execution path as preferred
+
+~~~
+[Desktop Entry]
+Name=Snipline
+Comment=Snipline
+GenericName=snipline
+Exec=/home/user/snipline/snipline
+Icon=snipline
+Type=Application
+StartupNotify=true
+Categories=Utility;
+~~~
