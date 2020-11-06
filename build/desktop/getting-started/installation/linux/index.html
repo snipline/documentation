@@ -163,11 +163,11 @@ Categories=Utility;
 </pre></td><td class="rouge-code"><pre><span class="c"># install Nativefier/Electron dependency</span>
 pkcon install libXScrnSaver 
 
-<span class="c"># Download Snipline to your home directory</span>
-<span class="nb">cd</span> ~/ <span class="o">&amp;&amp;</span> wget https://docs.snipline.io/media/snipline-fedora-linux-x64.tar.gz
+<span class="c"># Download Snipline to your home directory (Or preferred location)</span>
+<span class="nb">cd</span> ~/ <span class="o">&amp;&amp;</span> wget https://docs.snipline.io/media/snipline-linux-x64.tgz
 
 <span class="c"># Extract</span>
-<span class="nb">tar</span> <span class="nt">-xvzf</span> snipline-fedora-linux-x64.tar.gz
+<span class="nb">tar</span> <span class="nt">-xvzf</span> snipline-linux-x64.tgz
 
 <span class="c"># Create desktop file</span>
 touch ~/.local/share/applications/snipline.desktop
@@ -187,13 +187,56 @@ touch ~/.local/share/applications/snipline.desktop
 Name=Snipline
 Comment=Snipline
 GenericName=snipline
-Exec=/home/user/snipline-fedora-linx-x64/snipline
+Exec=/home/user/snipline/snipline
 Icon=snipline
 Type=Application
 StartupNotify=true
 Categories=Utility;
 </pre></td></tr></tbody></table></code></pre></div>
-<p>Now you should be able to run Snipline!</p>
+<h3 id="fedora--redhat-beta">Arch / Manjaro (Beta)</h3>
+
+<p>The Arch version of Snipline uses <a href="https://github.com/jiahaog/Nativefier">Nativefier</a> to load the latest version of Snipline.</p>
+
+<p>The following has worked on Manjaro.</p>
+
+<div class="highlight"><pre class="highlight shell"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="c"># Download Snipline to your home directory (Or preferred location)</span>
+<span class="nb">cd</span> ~/ <span class="o">&amp;&amp;</span> wget https://docs.snipline.io/media/snipline-linux-x64.tgz
+
+<span class="c"># Extract</span>
+<span class="nb">tar</span> <span class="nt">-xvzf</span> snipline-linux-x64.tgz
+
+<span class="c"># Create desktop file</span>
+touch /usr/local/share/applications/snipline.desktop
+</pre></td></tr></tbody></table></code></pre></div>
+<p>Add the following to your .desktop file, updating the execution path as preferred</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>[Desktop Entry]
+Name=Snipline
+Comment=Snipline
+GenericName=snipline
+Exec=/home/user/snipline/snipline
+Icon=snipline
+Type=Application
+StartupNotify=true
+Categories=Utility;
+</pre></td></tr></tbody></table></code></pre></div>
 
     <div class="main--pagination">
       <a href="/desktop/getting-started/installation/windows/" class="previous">Previous</a> <a href="/desktop/getting-started/web-client/" class="next">Next</a>
