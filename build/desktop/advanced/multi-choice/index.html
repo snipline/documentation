@@ -73,6 +73,17 @@
 
 <p><img src="/images/snipline/multi-choice.png" alt="Multi Choice Preset Variables" /></p>
 
+<h2>Referencing Multi-Choice Presets</h2>
+
+<p>To reference a multi-choice variable more than once use the regular variable syntax.</p>
+
+<p>For example, in the following snippet, there is an environment variable called <code>EMBER_ENV</code> which is set with a multi-choice variable and can be set as <code>production</code> or <code>development</code>.</p>
+
+<p>The value is then reused later, where it gets passed to the `--environment` argument with the regular variable syntax.</p>
+
+<div class="highlight"><pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>EMBER_ENV=#select{[env=production,development]} ember serve --environment=#{[env]}
+</pre></td></tr></tbody></table></code></pre></div>
     <div class="main--pagination">
       <a href="/desktop/advanced/variables/" class="previous">Previous</a> <a href="/desktop/advanced/navigation/" class="next">Next</a>
     </div>

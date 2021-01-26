@@ -24,3 +24,16 @@ Notice the `select` keyword and each option is listed after the `=` and seperate
 When triggering the copy process for a command the first 5 options have keybinds (`1`,`2`,`3`, etc).
 
 ![Multi Choice Preset Variables](/images/snipline/multi-choice.png)
+
+
+## Referencing Multi-Choice Presets
+
+To reference a multi-choice variable more than once use the regular variable syntax.
+
+For example, in the following snippet, there is an environment variable called `EMBER_ENV` which is set with a multi-choice variable and can be set as `production` or `development`. 
+
+The value is then reused later, where it gets passed to the `--environment` argument with the regular variable syntax.
+
+~~~snipline
+EMBER_ENV=#select{[env=production,development]} ember serve --environment=#{[env]}
+~~~
